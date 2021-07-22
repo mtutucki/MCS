@@ -1,12 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/227e7616bf.js" crossorigin="anonymous"></script>
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <title>MCS</title>
 </head>
+
 <body>
-    EEE
+
+    <nav>
+        <div class="nav__mobile">
+            <div class="nav__mobile__logo">MCS MAJOR</div>
+            <div class="nav__mobile__burger-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header__shadow"></div>
+        <div class="header__text">
+            <h1 class="header__text__header">Major car spa detailing Wola</h1>
+            <h2 class="header__text__content">Dbamy o każdy szczegół i najwyższej klasy kosmetyki.
+                Dbamy o każdy rodzaj pojazdu. Pomożemy wybrać Ci optymalny rodzaj usług.</h2>
+        </div>
+        <div class="header__knowus-wash"><button class="header__knowus-wash__button">Poznaj nas</button></div>
+    </header>
+
+    <main>
+        <section class="aboutus">
+            <h2 class="heading">O nas</h2>
+            <div class="aboutus__card">
+                <div class="aboutus__card__img aboutus__card__img--details">
+                    <div class="aboutus__card__img__shadow"></div>
+                    <div class="aboutus__card__img__text ">Dbamy o każdy szczegół</div>
+                </div>
+            </div>
+            <div class="aboutus__card__under">
+                <h2 class="aboutus__card__under__head">Każdy detal jest ważny</h2>
+                <p>Tutaj doskonale o tym wiemy, dlatego tak wielką wage przykładamy do naszej pracy. Powierzajac nam
+                    swój
+                    pojazd masz pewność, że zajmą się nim fachowcy z doświadczeniem i pasją.</p>
+            </div>
+
+            <div class="aboutus__card">
+                <div class="aboutus__card__img aboutus__card__img--evolution">
+                    <div class="aboutus__card__img__shadow"></div>
+                    <div class="aboutus__card__img__text">Wciąż się rozwijamy</div>
+                </div>
+            </div>
+            <div class="aboutus__card__under">
+                <h2 class="aboutus__card__under__head">Ciężka praca popłaca</h2>
+                <p>Szczególnie gdy praca to hobby. Każdy kolejny projekt jest coraz przyjemniejszy gdy docienia się
+                    samego siebie oraz zrealizowane prace. </p>
+            </div>
+
+            <div class="aboutus__card">
+                <div class="aboutus__card__img aboutus__card__img--fun">
+                    <div class="aboutus__card__img__shadow"></div>
+                    <div class="aboutus__card__img__text">Dobrze się bawimy</div>
+                </div>
+            </div>
+            <div class="aboutus__card__under">
+                <h2 class="aboutus__card__under__head">Kochaj to co robisz</h2>
+                <p>To nie przepracujesz ani jednego dnia w swoim życiu. To motto towarzyszy nam każdego dnia. </p>
+            </div>
+
+            <div class="aboutus__card">
+                <div class="aboutus__card__img aboutus__card__img--pets">
+                    <div class="aboutus__card__img__shadow"></div>
+                    <div class="aboutus__card__img__text">Kochamy zwierzęta</div>
+                </div>
+            </div>
+            <div class="aboutus__card__under">
+                <h2 class="aboutus__card__under__head">Podróżujesz z pupilem?</h2>
+                <p>Wpadnij z nim do nas. Uwielbiamy zwierzęta w pracy. Mimo, że bardzo często nam jej dokładają i tak są naszymi najlepszymi kompanami w podróży.
+                </p>
+            </div>
+        </section>
+
+        <section class="cut">
+            <div class="cut__shadow"></div>
+            <div class="cut__text">Major car spa detailing Wola</div>
+        </section>
+
+        <section class="portfolio">
+            <h2 class="heading portfolio__heading">Portfolio</h2>
+                <div class="portfolio__carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../dist/img/main/carousel/1.jpg" class="d-block w-100" alt="Czerwony samochód marki audi po usłuchach w MCS detaling">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../dist/img/main/carousel/2.jpg" class="d-block w-100" alt="Tył samochódu marki BMW po usłuchach w MCS detaling">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../dist/img/main/carousel/3.jpg" class="d-block w-100" alt="Samochód marki mercedes w salonie detalingu MCS">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../dist/img/main/carousel/4.jpg" class="d-block w-100" alt="Śliczna niebieska skoda po usłuchach w MCS">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../dist/img/main/carousel/5.jpg" class="d-block w-100" alt="Honda potocznie zwana ufo od boku">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../dist/img/main/carousel/6.jpg" class="d-block w-100" alt="Volkswagen po fantastycznej renowacji w MCS detaling">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            
+        </section>
+
+        <section class="offers">
+            <h2 class="heading">Oferty</h2>
+
+        </section>
+
+
+        <section class="contact"></section>
+    </main>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- My js script -->
+    <script src="./dist/js/main.min.js"></script>
 </body>
+
 </html>
