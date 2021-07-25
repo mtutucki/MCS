@@ -1,3 +1,5 @@
+@import './_variables';
+
 *,
 *::before,
 *::after {
@@ -11,14 +13,17 @@ html {
     // font size = 10px
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 9vh;
 }
 
 body {
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    min-width: 100%;
 }
 
+// navigation
 nav {
 
     // nav for mobile and tablet
@@ -29,14 +34,114 @@ nav {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 1rem;
         height: 10vh;
         width: 100vw;
         background-color: white;
         color: black;
-        font-size: 1.4rem;
-        padding: 0 2rem;
-        z-index: 2;
+        font-size: 1.8rem;
+        z-index: 101;
+
+        &__logo {
+            padding: 1rem;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: transform .3s;
+        }
+
+        &__logo:hover {
+            transform: scale(1.05);
+        }
+
+        &__burger-btn {
+            cursor: pointer;
+            padding: 1rem;
+            transform: scale(.55);
+        }
+
+        &__links {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            top: -100vh;
+            padding: $padding-sides-mobile;
+            color: black;
+            background-color: white;
+            width: 100vw;
+            height: 90vh;
+            z-index: 100;
+            text-align: center;
+
+
+            &__link {
+                margin: 3rem;
+                font-size: 1.6rem;
+                padding: 1rem;
+                width: 50%;
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 4px;
+                transition: background-color .3s, border .3s;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                button {
+                    border: transparent;
+                    background-color: transparent;
+                    transition: color .3s;
+                }
+            }
+
+            &__link:hover {
+                background-color: black;
+                border: 2px solid white;
+            }
+
+            &__link:hover button {
+                color: white;
+            }
+
+        }
+
+
+
+        &__links--active {
+            display: flex;
+            animation: nav-active .6s ease-out forwards;
+        }
+
+        &__links--nav__exit {
+            display: flex;
+            animation: nav-disable .6s ease-in forwards;
+        }
     }
+
+    @keyframes nav-active {
+        from {
+            top: -100vh;
+        }
+
+        to {
+            top: 10vh;
+        }
+    }
+
+    @keyframes nav-disable {
+        from {
+            top: 10vh;
+        }
+
+        to {
+            top: -100vh;
+        }
+    }
+
 }
 
 // header - home site
@@ -45,11 +150,12 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 0 2rem;
+    padding: $padding-sides-mobile;
     background-image: url("../img/header/header.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
+    background-attachment: fixed;
+
 
     // background shadow
     &__shadow {
@@ -68,19 +174,22 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 20vh;
+        height: 100%;
         z-index: 1;
 
         &__header {
-            font-size: 1.8em;
+            font-size: 2rem;
+            width: 100%;
             font-weight: normal;
+            text-align: center;
         }
 
         &__content {
             font-size: 1.6em;
             font-weight: normal;
             text-align: center;
-            margin-top: 5vh;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
 
         }
     }
@@ -90,20 +199,44 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         padding: .5rem;
-        margin-top: 35vh;
         font-size: 1.4rem;
         align-items: center;
         z-index: 1;
 
         &__button {
+            position: relative;
             font-size: 1.4rem;
             background-color: transparent;
             border: 1px solid white;
+            border-radius: 4px;
             color: white;
             padding: 1rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
 
+        &__button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s;
+            z-index: -1;
+        }
+
+        &__button:hover::before {
+            transform: scaleX(1);
+        }
     }
 
 }
@@ -124,7 +257,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 2rem;
+        padding: $padding-sides-mobile;
         padding-bottom: 2rem;
         color: black;
         background-color: white;
@@ -145,7 +278,7 @@ main {
                 justify-content: center;
                 height: 100%;
                 width: 100%;
-                background-size: cover;
+                background-size: 100%;
                 background-position: center;
                 border-top: 3px solid black;
                 border-right: 3px solid black;
@@ -153,6 +286,7 @@ main {
                 border-top-left-radius: 4px;
                 border-top-right-radius: 4px;
                 overflow: hidden;
+                transition: background-size .3s;
                 filter: grayscale(1);
 
                 &__shadow {
@@ -186,6 +320,10 @@ main {
                     background-image: url('../img/main/aboutus/pets.jpg');
                 }
 
+            }
+
+            &__img:hover {
+                background-size: 110%;
             }
 
             &__under {
@@ -242,7 +380,7 @@ main {
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 2rem;
+            padding: $padding-sides-mobile;
             width: 100%;
             font-size: 2rem;
             z-index: 1;
@@ -254,7 +392,7 @@ main {
         position: relative;
         background-color: white;
         color: black;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
 
         &__heading {
             padding-bottom: 2rem;
@@ -267,7 +405,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 2rem;
+        padding: $padding-sides-mobile;
         color: white;
         font-size: 1.4rem;
 
@@ -284,10 +422,11 @@ main {
                 width: 100%;
                 border: 1px solid white;
                 border-radius: 4px;
-                background-size: cover;
+                background-size: 100%;
                 background-position: center;
                 filter: grayscale(1);
                 text-align: center;
+                transition: background-size .3s;
 
                 &--ceramics {
                     margin-top: 2rem;
@@ -309,6 +448,10 @@ main {
                 &--engine {
                     background-image: url('../img/main/offers/engine.jpg');
                 }
+            }
+
+            &__card:hover {
+                background-size: 110%;
             }
         }
 
@@ -339,7 +482,7 @@ main {
 
     // contact form. Phone and socials section
     .contact {
-        padding: 0 2rem;
+        padding: $padding-sides-mobile;
         color: black;
         background-color: white;
         width: 100%;
@@ -371,6 +514,7 @@ main {
                 flex-direction: column;
                 margin-bottom: 2rem;
 
+
                 input,
                 &__button {
                     text-align: center;
@@ -378,6 +522,31 @@ main {
                     border-radius: 4px;
                     padding: .5rem 0;
                     background-color: transparent;
+                    transition: background-color .3s, color .3s;
+                }
+
+                &__button:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+                &__info {
+                    opacity: 0;
+                    padding-top: .5rem;
+                    text-align: center;
+                }
+
+                &__message {
+                    padding: 1rem 2rem;
+                    margin-top: 1rem;
+                    min-width: 100%;
+                    height: 10vh;
+                    min-height: 10vh;
+                    max-height: 10vh;
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    text-align: center;
+                    overflow: auto;
                 }
             }
         }
@@ -395,7 +564,9 @@ main {
                 font-size: 4rem;
             }
 
+            a,
             button {
+                color: black;
                 padding: 1rem;
                 border: transparent;
                 background-color: transparent;
@@ -405,6 +576,7 @@ main {
                 display: flex;
                 align-items: center;
                 font-size: 2.2rem;
+                text-decoration: none;
             }
 
 
@@ -417,7 +589,7 @@ main {
 // footer
 .footer {
     margin: 2rem 0;
-    padding: 0 2rem;
+    padding: $padding-sides-mobile;
     color: white;
     background-color: black;
     text-align: center;
@@ -445,6 +617,19 @@ main {
 
         &__author {
             margin-top: 1rem;
+
+            a {
+                color: white;
+                padding: .5rem;
+                text-decoration: none;
+                cursor: pointer;
+                transition: color .3s;
+            }
+
+            a:hover {
+                color: wheat;
+            }
+
         }
     }
 

@@ -14,35 +14,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/227e7616bf.js" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- emailJS import -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_B209HdgYAl5zd8RfRdmcK");
+    })();
+    </script>
+    <!-- jonsuh hamburger button import -->
+    <link href="./dist/css/hamburgers.min.css" rel="stylesheet">
     <!-- MY CSS -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
+    <link rel="stylesheet" media="screen and (min-width:576px)" href="./dist/css/small.min.css">
+    <!-- <link rel="stylesheet" media="screen and (min-width:768px)" href="css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="css/large.css"> -->
+
     <title>MCS</title>
 </head>
 
 <body>
 
     <nav>
-
+        <!-- mobile -->
         <div class="nav__mobile">
-            <div class="nav__mobile__logo">MCS MAJOR</div>
-            <div class="nav__mobile__burger-btn"><i class="fas fa-bars"></i></div>
+            <a href="#home" class="nav__mobile__logo">MCS Major</a>
+            <button class="nav__mobile__burger-btn hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <div class="nav__mobile__links">
+            <a href="#aboutus" class="nav__mobile__links__link"><button>O nas</button></a>
+            <a href="#portfolio" class="nav__mobile__links__link"><button>Portfolio</button></a>
+            <a href="#offers" class="nav__mobile__links__link"><button>Nasza oferta</button></a>
+            <a href="#contact" class="nav__mobile__links__link"><button>Kontakt</button></a>
         </div>
 
     </nav>
 
-    <header class="header">
+    <header class="header" id="home">
         <div class="header__shadow"></div>
         <div class="header__text">
             <h1 class="header__text__header">Major car spa detailing Wola</h1>
-            <h2 class="header__text__content">Dbamy o każdy szczegół i najwyższej klasy kosmetyki.
-                Dbamy o każdy rodzaj pojazdu. Pomożemy wybrać Ci optymalny rodzaj usług.</h2>
+            <h2 class="header__text__content">Dbamy o każdy szczegół w każdym rodzaju pojazdu</h2>
+            <button class="header__knowus-wash__button"><a href="#aboutus">Poznaj nas</a></button>
+
         </div>
-        <div class="header__knowus-wash"><button class="header__knowus-wash__button">Poznaj nas</button></div>
     </header>
 
     <main>
 
-        <section class="aboutus">
+        <section class="aboutus" id="aboutus">
             <h2 class="heading">O nas</h2>
             <div class="aboutus__card">
                 <div class="aboutus__card__img aboutus__card__img--details">
@@ -99,7 +124,7 @@
             <div class="cut__text">Major car spa detailing Wola</div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2 class="heading portfolio__heading">Portfolio</h2>
             <div class="portfolio__carousel">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -158,7 +183,7 @@
 
         </section>
 
-        <section class="offers">
+        <section class="offers" id="offers">
             <h2 class="heading">Nasza oferta</h2>
             <div class="offers__top">
                 <div class="offers__top__card offers__top__card--ceramics">
@@ -183,7 +208,7 @@
             </div>
         </section>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <h2 class="heading">Kontakt</h2>
 
             <div class="contact__text-box">
@@ -192,21 +217,26 @@
                     dogadamy.</div>
             </div>
 
-            <div class="contact__form">
-                <form class="contact__form__sheet">
-                    <input type="text" placeholder="Imie i nazwisko" name="name-surname"></input>
-                    <input type="text" placeholder="Jaki pojazd" name="vehicle"></input>
-                    <input type="text" placeholder="Opis usług, które mają zostać wykonane" name="name-surname"></input>
-                    <button class="contact__form__sheet__button">Wyślij</button>
-                </form>
-            </div>
-
-            <div class="contact__others">
-                <button><i class="fab fa-facebook-square"></i></button> 
-                <button class="contact__others__phone"><i class="fas fa-mobile-alt"></i>&nbsp 514139531</button>
-                <button><i class="fab fa-twitter-square"></i> </button> 
+            <div id="contact-form" class="contact__form">
+                <div class="contact__form__sheet">
+                    <input class="contact__form__sheet__name" id="fromName" type="text" placeholder="Imie" name="user_name"></input>
+                    <input class="contact__form__sheet__number" id="number" type="text" placeholder="Numer telefonu"
+                        name="contact_number"></input>
+                    <input class="contact__form__sheet__description" id="mail" type="text" placeholder="Adres e-mail"></input>
+                    <textarea class="contact__form__sheet__message" id="message" placeholder="Jaki pojazd oraz wybrane usługi"
+                        name="message"></textarea>
+                    <button  class="contact__form__sheet__button">Wyślij</button>
+                    <div class="contact__form__sheet__info">Proszę uzupełnij wszystkie pola</div>
                 </div>
-            </div>
+                <div class="contact__others">
+                    <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a class="contact__others__phone" href="tel:514-139-531"><i class="fas fa-mobile-alt"></i></a>
+                    <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
+                            class="fab fa-instagram-square"></i></a>
+                </div>
+        </div>
+        </div>
         </div>
 
     </main>
@@ -215,19 +245,23 @@
         <div class="footer__box">
             <div class="footer__box__logo"></div>
             <div class="footer__box__adress">
-                Wola ul.Kopalniana 6 43-225</div>
+                <p>ul.Kopalniana 6 43-225</p>
+                <p>Wola</p>
+            </div>
         </div>
         <div class="footer__copyright">
             <div class="footer__copyright__text">
                 &copy Copyright 2021 - All rights reserved
-            </div> 
+            </div>
             <div class="footer__copyright__author">
-                Author: Marcin Tutucki 
+                <a target="_blank" href="https://www.facebook.com/marcin.tutucki/">Author: Marcin Tutucki</a>
             </div>
         </div>
 
     </footer>
 
+    <!-- emailJs import -->
+        <script src="./dist/js/emailjs.min.js"></script>
     <!-- bootstrap js import-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
