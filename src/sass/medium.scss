@@ -1,0 +1,297 @@
+@import './_variables';
+
+html {
+    scroll-padding-top: 9vh;
+}
+
+// navigation
+nav {
+
+    // nav for mobile and tablet
+    .nav__mobile {
+        padding: $padding-sides-tablet;
+        height: 10vh;
+        font-size: 2rem;
+
+        &__links {
+            height: 90vh;
+
+            &__link {
+                margin: 4rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        &__links--active {
+            display: flex;
+            animation: nav-active .6s ease-out forwards;
+        }
+
+        &__links--nav__exit {
+            display: flex;
+            animation: nav-disable .6s ease-in forwards;
+        }
+
+        @keyframes nav-active {
+            from {
+                top: -100vh;
+            }
+
+            to {
+                top: 10vh;
+            }
+        }
+
+        @keyframes nav-disable {
+            from {
+                top: 10vh;
+            }
+
+            to {
+                top: -100vh;
+            }
+        }
+    }
+}
+
+// header - home site
+.header {
+    background-image: url("../img/header/header.jpg");
+
+    // text inside header
+    &__text {
+        &__header {
+            font-size: 3rem;
+        }
+
+        &__content {
+            font-size: 2rem;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+    }
+
+    // button box
+    &__knowus-wash {
+        &__button {
+            padding: 1.5rem;
+            font-size: 2rem;
+        }
+    }
+
+}
+
+main {
+
+    // head styles for every section "h2"
+    .heading {
+        font-size: 2.8rem;
+        padding-top: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    // about us section
+    .aboutus {
+        padding: $padding-sides-tablet;
+        padding-bottom: 3rem;
+
+        &__card {
+            padding-top: 3rem;
+            height: 25vh;
+
+            &__img {
+                &__text {
+                    font-size: 3rem;
+                }
+
+                &--details {
+                    background-image: url('../img/main/aboutus/detail.jpg');
+                }
+
+                &--evolution {
+                    background-image: url('../img/main/aboutus/evolution.jpg');
+                }
+
+                &--fun {
+                    background-image: url('../img/main/aboutus/fun.jpg');
+                }
+
+                &--pets {
+                    background-image: url('../img/main/aboutus/pets.jpg');
+                }
+
+            }
+
+            &__under {
+                padding: 3rem;
+                font-size: 2rem;
+
+                &__head {
+                    font-size: 2.2rem;
+                    padding-bottom: 3rem;
+                }
+
+                &__head::before {
+                    bottom: 2rem;
+                }
+
+            }
+        }
+    }
+
+    // cut after fir section
+    .cut {
+        height: 20vh;
+        background-image: url('../img/main/cut/cut.jpg');
+
+        &__text {
+            padding: $padding-sides-tablet;
+            font-size: 3rem;
+        }
+    }
+
+    // portfolio section
+    .portfolio {
+        background-color: white;
+        color: black;
+        padding-bottom: 3rem;
+
+        &__heading {
+            padding-bottom: 3rem;
+        }
+
+        .carousel-item {
+
+            img {
+                height: 50vh;
+            }
+
+        }
+
+    }
+
+    // offers section
+    .offers {
+        padding: $padding-sides-tablet;
+
+        &__top {
+            &__card {
+                margin-bottom: 3rem;
+                font-size: 3rem;
+                height: 25vh;
+
+                &--ceramics {
+                    margin-top: 3rem;
+                    background-image: url('../img/main/offers/ceramics.jpg');
+                }
+
+                &--wax {
+                    background-image: url('../img/main/offers/wax.jfif');
+                }
+
+                &--wash {
+                    background-image: url('../img/main/offers/wash.jfif');
+                }
+
+                &--impregnation {
+                    background-image: url('../img/main/offers/impregnation.jpg')
+                }
+
+                &--engine {
+                    background-image: url('../img/main/offers/engine.jpg');
+                }
+            }
+
+        }
+
+        &__down {
+            font-size: 1.8rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    // contact form. Phone and socials section
+    .contact {
+        padding: $padding-sides-tablet;
+
+        &__text-box {
+            margin-top: 3rem;
+            padding: 3rem;
+            font-size: 1.8rem;
+
+            &__up {
+                padding-bottom: 3rem;
+                font-size: 2rem;
+            }
+        }
+
+        &__form {
+            font-size: 1.8rem;
+
+            &__sheet {
+                margin-bottom: 3rem;
+
+                input,
+                &__button {
+                    margin-top: 1.5rem;
+                    border-radius: 4px;
+                    padding: 2rem 0;
+                }
+
+                &__info {
+                    padding-top: 1.5rem;
+                }
+
+                &__message {
+                    padding: 1rem 3rem;
+                    margin-top: 2rem;
+                    height: 10vh;
+                    min-height: 10vh;
+                    max-height: 10vh;
+                }
+            }
+        }
+
+        &__others {
+            padding-bottom: 3rem;
+
+            .fas,
+            .fab {
+                font-size: 4rem;
+            }
+
+        }
+    }
+
+}
+
+// footer
+.footer {
+    margin: 3rem 0;
+    padding: $padding-sides-tablet;
+
+    &__box {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+
+        &__logo {
+            background-image: url('../img/footer/logo/logo.jpg');
+        }
+    }
+
+    &__copyright {
+        position: relative;
+        font-size: 1.4rem;
+
+        &__author {
+            margin-top: 2rem;
+
+        }
+    }
+
+    &__copyright::after {
+        top: -1.5rem;
+    }
+}
