@@ -52,10 +52,11 @@ const contact_sendEmail = (params) => {
             data: JSON.stringify(data),
             contentType: 'application/json'
         }).done(function () {
-            console.log('Your mail is sent!');
+            alert('Twoja wiadomość została wysłana. Dziękujemy za kontakt');
         }).fail(function (error) {
-            console.log('Oops... ' + JSON.stringify(error))
+            alert('Oops... ' + JSON.stringify(error))
         });
+
 
         contact_info.style.opacity = "1";
         contact_info.style.color = "green";

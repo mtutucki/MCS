@@ -56,7 +56,6 @@ nav {
 
 // header - home site
 .header {
-    background-image: url("../img/header/header.jpg");
 
     // text inside header
     &__text {
@@ -98,9 +97,10 @@ main {
 
         &__card {
             padding-top: 3rem;
-            height: 25vh;
 
             &__img {
+                height: 25vh;
+
                 &__text {
                     font-size: 3rem;
                 }

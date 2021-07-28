@@ -1,1 +1,400 @@
+@import './_variables';
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// set global font size to 10px
+html {
+    scroll-padding-top: 7vh;
+}
+
+
+// navigation
+nav {
+
+    // nav for mobile and tablet
+    .nav__mobile {
+        display: none;
+    }
+
+    .nav__desktop {
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.8rem;
+        background-color: white;
+        height: 8vh;
+        width: 100%;
+        z-index: 101;
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            font-size: 2rem;
+            color: black;
+            text-decoration: none;
+        }
+
+        &__links {
+            &__link {
+
+                &__btn {
+                    padding-left: 3rem;
+                    background-color: transparent;
+                    border: transparent;
+                }
+
+                &__btn:hover {
+                    color: red;
+                }
+
+            }
+        }
+
+    }
+}
+
+// header - home site
+.header {
+    height: 100vh;
+    padding: $padding-sides-desktop;
+
+    // text inside header
+    &__text {
+        &__header {
+            font-size: 4rem;
+        }
+
+        &__content {
+            font-size: 1.8rem;
+            margin: 7rem 0;
+        }
+    }
+
+    // button box
+    &__knowus-wash {
+        &__button {
+            font-size: 1.8rem;
+        }
+    }
+
+}
+
+main {
+
+    // head styles for every section "h2"
+    .heading {
+        font-size: 2.6rem;
+        padding-top: 3rem;
+    }
+
+    // about us section
+    .aboutus {
+        padding-bottom: 3rem;
+
+
+        &__card {
+            flex-direction: row;
+            padding: 2rem 0;
+            margin: 1rem 0;
+            height: 30vh;
+            border-radius: 4px;
+
+            &--evolution,
+            &--pets {
+                flex-direction: row-reverse;
+            }
+
+
+
+            &__img {
+                padding: 3rem 6rem;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid black;
+                border-left: 3px solid black;
+                border-top: 3px solid black;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+
+                &__text {
+                    font-size: 2.4rem;
+                }
+
+                &--details {
+                    background-image: url('../img/main/aboutus/detail.jpg');
+                }
+
+                &--evolution {
+                    background-image: url('../img/main/aboutus/evolution.jpg');
+                }
+
+                &--fun {
+                    background-image: url('../img/main/aboutus/fun.jpg');
+                }
+
+                &--pets {
+                    background-image: url('../img/main/aboutus/pets.jpg');
+                }
+
+            }
+
+            &__under {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem 6rem;
+                font-size: 1.8rem;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+
+                &__head {
+                    font-size: 2rem;
+                    padding-bottom: 3rem;
+                }
+
+                &__head::before {
+                    bottom: 2rem;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    // cut after fir section
+    .cut {
+        height: 20vh;
+        background-image: url('../img/main/cut/cut.jpg');
+
+        &__text {
+            display: flex;
+            padding: $padding-sides-mobile;
+            font-size: 2.6rem;
+            z-index: 1;
+        }
+    }
+
+    // portfolio section
+    .portfolio {
+        padding-bottom: 3rem;
+
+        &__heading {
+            padding-bottom: 3rem;
+        }
+
+        .carousel-item {
+            img {
+                height: 80vh;
+                border-radius: 4px;
+            }
+        }
+
+    }
+
+    // offers section
+    .offers {
+
+        &__top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-bottom: 2rem;
+            width: 100%;
+
+            &__down {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            &__card {
+                font-size: 2.4rem;
+                height: 35vh;
+                width: 25%;
+                margin: 3rem 0;
+
+                &--ceramics {
+                    background-image: url('../img/main/offers/ceramics.jpg');
+                }
+
+                &--wax {
+                    margin: 0 6rem;
+                    background-image: url('../img/main/offers/wax.jfif');
+                }
+
+                &--wash {
+                    margin-right: 0;
+                    background-image: url('../img/main/offers/wash.jfif');
+                }
+
+                &--impregnation {
+                    background-image: url('../img/main/offers/impregnation.jpg')
+                }
+
+                &--engine {
+                    background-image: url('../img/main/offers/engine.jpg');
+                }
+            }
+
+            &__card:hover {
+                background-size: 110%;
+            }
+        }
+
+        &__down {
+            display: none;
+            border: 1px solid white;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+
+            &__contact-us {
+                position: relative;
+                color: white;
+                text-decoration: none;
+            }
+
+            &__contact-us::before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                background-color: white;
+                height: 1px;
+                width: 100%;
+            }
+        }
+    }
+
+    // contact form. Phone and socials section
+    .contact {
+
+        &__desktop__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // align-items: center;
+            padding: 3rem 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__text-box {
+            margin: 0;
+            padding: 3rem;
+            font-size: 1.6rem;
+            width: 40%;
+            height: 40vh;
+
+            &__desktop-social {
+                display: flex;
+                flex-direction: column;
+                padding: 3rem 0;
+                width: 100%;
+                text-align: left;
+
+                a {
+                    text-decoration: none;
+                    padding: 1rem 0;
+                    font-size: 1.6rem;
+                    color: white;
+
+                    i {
+                        padding-right: 2rem;
+                    }
+                }
+            }
+
+            &__up {
+                font-size: 2rem;
+            }
+        }
+
+        &__form {
+            display: block;
+            font-size: 1.6rem;
+            height: 100%;
+            width: 55%;
+
+            &__sheet {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                height: 40vh;
+
+                input,
+                &__button {
+                    margin: 0;
+                    padding: 1rem;
+                }
+
+                &__info {
+                    display: none;
+                }
+
+                &__message {
+                    margin-top: 0rem;
+                }
+            }
+        }
+
+        &__others {
+            display: none;
+        }
+    }
+
+}
+
+// footer
+.footer {
+    margin: 3rem 0;
+
+    &__box {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+
+        &__logo {
+            height: 100px;
+            width: 100px;
+            background-image: url('../img/footer/logo/logo.jpg');
+        }
+    }
+
+    &__copyright {
+        margin-top: 3rem;
+        position: relative;
+        font-size: 1rem;
+
+        &__author {
+            margin-top: 2rem;
+        }
+    }
+
+    &__copyright::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -1rem;
+        background-color: white;
+        height: 1px;
+        width: 100%;
+    }
+}

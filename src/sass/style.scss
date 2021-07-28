@@ -1,4 +1,5 @@
 @import './_variables';
+@import './_colors';
 
 *,
 *::before,
@@ -8,12 +9,6 @@
     box-sizing: border-box;
 }
 
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
 
 // set global font size to 10px
 html {
@@ -21,17 +16,22 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 9vh;
+
 }
 
 body {
-    background-color: black;
+    background-color: $black;
     color: white;
     font-family: 'Montserrat', sans-serif;
     min-width: 100%;
+    overflow-x: hidden;
 }
 
 // navigation
 nav {
+    .nav__desktop {
+        display: none;
+    }
 
     // nav for mobile and tablet
     .nav__mobile {
@@ -44,14 +44,14 @@ nav {
         padding: 1rem;
         height: 10vh;
         width: 100vw;
-        background-color: white;
-        color: black;
+        background-color: $grey;
+        color: $black;
         font-size: 1.8rem;
         z-index: 101;
 
         &__logo {
             padding: 1rem;
-            color: black;
+            color: $black;
             text-decoration: none;
             text-transform: uppercase;
             transition: transform .3s;
@@ -75,8 +75,8 @@ nav {
             position: fixed;
             top: -100vh;
             padding: $padding-sides-mobile;
-            color: black;
-            background-color: white;
+            color: $black;
+            background-color: $grey;
             width: 100vw;
             height: 90vh;
             z-index: 100;
@@ -88,13 +88,13 @@ nav {
                 font-size: 1.6rem;
                 padding: 1rem;
                 width: 50%;
-                background-color: white;
-                border: 2px solid black;
+                background-color: $grey;
+                border: 2px solid $black;
                 border-radius: 4px;
                 transition: background-color .3s, border .3s;
 
                 a {
-                    color: black;
+                    color: $black;
                     text-decoration: none;
                 }
 
@@ -106,12 +106,12 @@ nav {
             }
 
             &__link:hover {
-                background-color: black;
-                border: 2px solid white;
+                background-color: $black;
+                border: 2px solid $grey;
             }
 
             &__link:hover button {
-                color: white;
+                color: $grey;
             }
 
         }
@@ -153,15 +153,26 @@ nav {
 
 // header - home site
 .header {
+
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100%;
     padding: $padding-sides-mobile;
-    background-image: url("../img/header/header.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: .9;
+    }
 
 
     // background shadow
@@ -171,7 +182,7 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, .6);
+        background-color: rgba(20, 20, 20, .8);
         z-index: 0;
     }
 
@@ -185,10 +196,12 @@ nav {
         z-index: 1;
 
         &__header {
+            font-family: 'Oswald', sans-serif;
             font-size: 2rem;
             width: 100%;
-            font-weight: normal;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         &__content {
@@ -201,50 +214,43 @@ nav {
         }
     }
 
-    // button box
-    &__knowus-wash {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        padding: .5rem;
+    &__button {
+        position: relative;
+        padding: 1rem;
+        position: relative;
         font-size: 1.4rem;
-        align-items: center;
-        z-index: 1;
-
-        &__button {
-            position: relative;
-            font-size: 1.4rem;
-            background-color: transparent;
-            border: 1px solid white;
-            border-radius: 4px;
-            color: white;
-            padding: 1rem;
-
-            a {
-                color: white;
-                text-decoration: none;
-            }
-        }
-
-        &__button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform .3s;
-            z-index: -1;
-        }
-
-        &__button:hover::before {
-            transform: scaleX(1);
-        }
+        border: 1px solid $black;
+        border-radius: 4px;
+        background-color: $grey;
+        text-decoration: none;
+        color: $black;
+        transition: color .3s;
+        text-transform: uppercase;
+        z-index: 0;
     }
+
+    &__button:hover {
+        color: $grey;
+    }
+
+    &__button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s;
+        z-index: -1;
+    }
+
+    &__button:hover::before {
+        transform: scaleX(1);
+    }
+
 
 }
 
@@ -266,24 +272,24 @@ main {
         align-items: center;
         padding: $padding-sides-mobile;
         padding-bottom: 2rem;
-        color: black;
-        background-color: white;
+        color: $grey;
+        background-color: $black;
 
 
         &__card {
+            display: flex;
+            flex-direction: column;
             position: relative;
             padding-top: 2rem;
-            height: 30vh;
             width: 100%;
             border-radius: 4px;
-            text-align: center;
 
             &__img {
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                height: 100%;
+                height: 25vh;
                 width: 100%;
                 background-size: 100%;
                 background-position: center;
@@ -294,6 +300,7 @@ main {
                 border-top-right-radius: 4px;
                 overflow: hidden;
                 transition: background-size .3s;
+                text-align: center;
                 filter: grayscale(1);
 
                 &__shadow {
@@ -412,6 +419,7 @@ main {
         flex-direction: column;
         align-items: center;
         padding: $padding-sides-mobile;
+        background-color: black;
         color: white;
         font-size: 1.4rem;
 
@@ -424,7 +432,7 @@ main {
                 align-items: center;
                 margin-bottom: 2rem;
                 font-size: 2rem;
-                height: 20vh;
+                height: 25vh;
                 width: 100%;
                 border: 1px solid white;
                 border-radius: 4px;
@@ -457,6 +465,7 @@ main {
             }
 
             &__card:hover {
+                cursor: pointer;
                 background-size: 110%;
             }
         }
@@ -492,6 +501,7 @@ main {
         color: black;
         background-color: white;
         width: 100%;
+        z-index: 100;
 
         &__text-box {
             margin-top: 2rem;
@@ -500,8 +510,13 @@ main {
             text-align: center;
             color: white;
             background-color: black;
+
             border: 1px solid white;
             border-radius: 4px;
+
+            &__desktop-social {
+                display: none;
+            }
 
             &__up {
                 padding-bottom: 1rem;
@@ -518,7 +533,7 @@ main {
                 display: flex;
                 width: 100%;
                 flex-direction: column;
-                margin-bottom: 2rem;
+                padding-bottom: 2rem;
 
 
                 input,
@@ -581,7 +596,6 @@ main {
             &__phone {
                 display: flex;
                 align-items: center;
-                font-size: 2.2rem;
                 text-decoration: none;
             }
 
@@ -594,7 +608,7 @@ main {
 
 // footer
 .footer {
-    margin: 2rem 0;
+    padding: 2rem 0;
     padding: $padding-sides-mobile;
     color: white;
     background-color: black;
@@ -606,7 +620,7 @@ main {
         justify-content: space-between;
         align-items: center;
         font-size: 1.4rem;
-        margin-bottom: 2rem;
+        padding-bottom: 2rem;
 
         &__logo {
             height: 100px;

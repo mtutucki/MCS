@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/227e7616bf.js" crossorigin="anonymous"></script>
     <!-- Jquery -->
@@ -46,8 +52,6 @@
                 </span>
             </button>
         </div>
-
-        </div>
         <div class="nav__mobile__links">
             <a href="#aboutus" class="nav__mobile__links__link"><button>O nas</button></a>
             <a href="#portfolio" class="nav__mobile__links__link"><button>Portfolio</button></a>
@@ -55,14 +59,44 @@
             <a href="#contact" class="nav__mobile__links__link"><button>Kontakt</button></a>
         </div>
 
+        <!-- desktop -->
+        <div class="nav__desktop">
+            <div class="container nav__desktop__wrapper">
+                <div class="nav__desktop__logo">
+                    <a href="#home" class="nav__desktop__logo">MCS Major</a>
+                </div>
+
+                <div class="nav__desktop__links">
+                    <a href="#aboutus" class="nav__desktop__links__link"><button
+                            class="nav__desktop__links__link__btn">O nas</button></a>
+                    <a href="#portfolio" class="nav__desktop__links__link"><button
+                            class="nav__desktop__links__link__btn">Portfolio</button></a>
+                    <a href="#offers" class="nav__desktop__links__link"><button
+                            class="nav__desktop__links__link__btn">Nasza oferta</button></a>
+                    <a href="#contact" class="nav__desktop__links__link"><button
+                            class="nav__desktop__links__link__btn">Kontakt</button></a>
+                </div>
+            </div>
+
+
+        </div>
     </nav>
 
     <header class="header" id="home">
+
+        <video autoplay muted loop id="myVideo">
+            <source src="../src/video/header/220659119_560257798484606_6933502826498599012_n.mp4" type="video/mp4">
+        </video>
+
         <div class="header__shadow"></div>
         <div class="header__text">
-            <h1 class="header__text__header">Major car spa detailing Wola</h1>
-            <h2 class="header__text__content">Dbamy o każdy szczegół w każdym rodzaju pojazdu</h2>
-            <button class="header__knowus-wash__button"><a href="#aboutus">Poznaj nas</a></button>
+            <h1 data-aos-delay="100" data-aos="fade-up" class="header__text__header">Major car spa detailing Wola</h1>
+            <h2 data-aos-delay="300" data-aos="fade-up" class="header__text__content">Dbamy o każdy szczegół w każdym
+                rodzaju pojazdu</h2>
+            <a data-aos-delay="500" data-aos="fade-up" href="#aboutus" class="header__button"> Poznaj nas
+            </a>
+
+
 
         </div>
     </header>
@@ -70,54 +104,61 @@
     <main>
 
         <section class="aboutus" id="aboutus">
-            <h2 class="heading">O nas</h2>
-            <div class="aboutus__card">
-                <div class="aboutus__card__img aboutus__card__img--details">
-                    <div class="aboutus__card__img__shadow"></div>
-                    <div class="aboutus__card__img__text ">Dbamy o każdy szczegół</div>
+            <div class="container">
+                <h2 data-aos-delay="300" data-aos="fade-down" class="heading">O nas</h2>
+                <div data-aos-delay="300" data-aos="fade-left" class="aboutus__card aboutus__card--details">
+                    <div class="aboutus__card__img aboutus__card__img--details">
+                        <div class="aboutus__card__img__shadow"></div>
+                        <div class="aboutus__card__img__text ">Dbamy o każdy szczegół</div>
+                    </div>
+                    <div class="aboutus__card__under">
+                        <h2 class="aboutus__card__under__head">Każdy detal jest ważny</h2>
+                        <p>Tutaj doskonale o tym wiemy, dlatego tak wielką wage przykładamy do naszej pracy. Powierzajac
+                            nam
+                            swój
+                            pojazd masz pewność, że zajmą się nim fachowcy z doświadczeniem i pasją.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="aboutus__card__under">
-                <h2 class="aboutus__card__under__head">Każdy detal jest ważny</h2>
-                <p>Tutaj doskonale o tym wiemy, dlatego tak wielką wage przykładamy do naszej pracy. Powierzajac nam
-                    swój
-                    pojazd masz pewność, że zajmą się nim fachowcy z doświadczeniem i pasją.</p>
-            </div>
 
-            <div class="aboutus__card">
-                <div class="aboutus__card__img aboutus__card__img--evolution">
-                    <div class="aboutus__card__img__shadow"></div>
-                    <div class="aboutus__card__img__text">Wciąż się rozwijamy</div>
+                <div data-aos-delay="300" data-aos="fade-right" class="aboutus__card aboutus__card--evolution">
+                    <div class="aboutus__card__img aboutus__card__img--evolution">
+                        <div class="aboutus__card__img__shadow"></div>
+                        <div class="aboutus__card__img__text">Wciąż się rozwijamy</div>
+                    </div>
+                    <div class="aboutus__card__under">
+                        <h2 class="aboutus__card__under__head">Ciężka praca popłaca</h2>
+                        <p>Szczególnie gdy praca to hobby. Każdy kolejny projekt jest coraz przyjemniejszy gdy docienia
+                            się
+                            samego siebie oraz zrealizowane prace. </p>
+                    </div>
                 </div>
-            </div>
-            <div class="aboutus__card__under">
-                <h2 class="aboutus__card__under__head">Ciężka praca popłaca</h2>
-                <p>Szczególnie gdy praca to hobby. Każdy kolejny projekt jest coraz przyjemniejszy gdy docienia się
-                    samego siebie oraz zrealizowane prace. </p>
-            </div>
 
-            <div class="aboutus__card">
-                <div class="aboutus__card__img aboutus__card__img--fun">
-                    <div class="aboutus__card__img__shadow"></div>
-                    <div class="aboutus__card__img__text">Dobrze się bawimy</div>
+                <div data-aos-delay="300" data-aos="fade-left" class="aboutus__card aboutus__card--fun">
+                    <div class="aboutus__card__img aboutus__card__img--fun">
+                        <div class="aboutus__card__img__shadow"></div>
+                        <div class="aboutus__card__img__text">Dobrze się bawimy</div>
+                    </div>
+                    <div class="aboutus__card__under">
+                        <h2 class="aboutus__card__under__head">Kochaj to co robisz</h2>
+                        <p>To nie przepracujesz ani jednego dnia w swoim życiu. To motto towarzyszy nam każdego dnia.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="aboutus__card__under">
-                <h2 class="aboutus__card__under__head">Kochaj to co robisz</h2>
-                <p>To nie przepracujesz ani jednego dnia w swoim życiu. To motto towarzyszy nam każdego dnia. </p>
-            </div>
 
-            <div class="aboutus__card">
-                <div class="aboutus__card__img aboutus__card__img--pets">
-                    <div class="aboutus__card__img__shadow"></div>
-                    <div class="aboutus__card__img__text">Kochamy zwierzęta</div>
+                <div data-aos-delay="300" data-aos="fade-right" class="aboutus__card aboutus__card--pets">
+                    <div class="aboutus__card__img aboutus__card__img--pets">
+                        <div class="aboutus__card__img__shadow"></div>
+                        <div class="aboutus__card__img__text">Kochamy zwierzęta</div>
+                    </div>
+                    <div class="aboutus__card__under">
+                        <h2 class="aboutus__card__under__head">Podróżujesz z pupilem?</h2>
+                        <p>Wpadnij z nim do nas. Uwielbiamy zwierzęta w pracy. Mimo, że bardzo często nam jej dokładają
+                            i tak są
+                            naszymi najlepszymi kompanami w podróży.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="aboutus__card__under">
-                <h2 class="aboutus__card__under__head">Podróżujesz z pupilem?</h2>
-                <p>Wpadnij z nim do nas. Uwielbiamy zwierzęta w pracy. Mimo, że bardzo często nam jej dokładają i tak są
-                    naszymi najlepszymi kompanami w podróży.
-                </p>
+
             </div>
         </section>
 
@@ -127,8 +168,8 @@
         </section>
 
         <section class="portfolio" id="portfolio">
-            <h2 class="heading portfolio__heading">Portfolio</h2>
-            <div class="portfolio__carousel">
+            <h2 data-aos-delay="300" data-aos="fade-down" class="heading portfolio__heading">Portfolio</h2>
+            <div data-aos-delay="300" data-aos="fade-up" class="portfolio__carousel container">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -186,91 +227,131 @@
         </section>
 
         <section class="offers" id="offers">
-            <h2 class="heading">Nasza oferta</h2>
-            <div class="offers__top">
-                <div class="offers__top__card offers__top__card--ceramics">
-                    <div class="offers__top__card__text">Powłoki ceramiczne</div>
+            <h2 data-aos-delay="300" data-aos="fade-down" class="heading">Nasza oferta</h2>
+            <div class="container">
+                <div class="offers__top">
+                    <div data-aos-delay="500" data-aos="fade-right"
+                        class="offers__top__card offers__top__card--ceramics">
+                        <div class="offers__top__card__text">Powłoki ceramiczne</div>
+                    </div>
+                    <div data-aos-delay="500" data-aos="fade-left" class="offers__top__card offers__top__card--wax">
+                        <div class="offers__top__card__text">Aplikacja wosku na lakier</div>
+                    </div>
+                    <div data-aos-delay="500" data-aos="fade-right" class="offers__top__card offers__top__card--wash">
+                        <div class="offers__top__card__text">Dokładne czyszczenie, pranie wnętrz.</div>
+                    </div>
+
+                    <div class="offers__top offers__top__down">
+                        <div data-aos-delay="500" data-aos="fade-left"
+                            class="offers__top__card offers__top__card--impregnation">
+                            <div class="offers__top__card__text">Impregnacja skóry</div>
+                        </div>
+                        <div data-aos-delay="500" data-aos="fade-right"
+                            class="offers__top__card offers__top__card--engine">
+                            <div class="offers__top__card__text">Czyszczenie komory silnika</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="offers__top__card offers__top__card--wax">
-                    <div class="offers__top__card__text">Aplikacja wosku na lakier</div>
+                <div data-aos-delay="500" data-aos="fade-left" class="offers__down">
+                    <p>Przywrócimy blask salonowy Twojemu pojazdowi</p>
+                    <p><a href="#contact" class="offers__down__contact-us">Skontaktuj się z nami</a></p>
                 </div>
-                <div class="offers__top__card offers__top__card--wash">
-                    <div class="offers__top__card__text">Dokładne czyszczenie, pranie wnętrz.</div>
-                </div>
-                <div class="offers__top__card offers__top__card--impregnation">
-                    <div class="offers__top__card__text">Impregnacja skóry</div>
-                </div>
-                <div class="offers__top__card offers__top__card--engine">
-                    <div class="offers__top__card__text">Czyszczenie komory silnika</div>
-                </div>
-            </div>
-            <div class="offers__down">
-                <p>Przywrócimy blask salonowy Twojemu pojazdowi</p>
-                <p><a href="#contact" class="offers__down__contact-us">Skontaktuj się z nami</a></p>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <h2 class="heading">Kontakt</h2>
+            <h2 data-aos-delay="300" data-aos="fade-down" class="heading">Kontakt</h2>
 
-            <div class="contact__text-box">
-                <div class="contact__text-box__up">Napisz do nas!</div>
-                <div class="contact__text-box__down">Do każdego zlecenia podchodzimy indywidualnie. Napewno się
-                    dogadamy.</div>
+            <div class="contact__desktop__wrapper container">
+                <div data-aos-delay="300" data-aos="fade-up" class="contact__text-box">
+                    <div class="contact__text-box__up">Napisz do nas!</div>
+                    <div class="contact__text-box__down">Do każdego zlecenia podchodzimy indywidualnie. Napewno się
+                        dogadamy.</div>
+                    <div class="contact__text-box__desktop-social">
+                        <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
+                                class="fab fa-facebook-square"></i>Facebook MCS</a>
+                        <a class="contact__text-box__desktop-social__phone" href="tel:514-139-531"><i
+                                class="fas fa-mobile-alt"></i>514-139-531</a>
+                        <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
+                                class="fab fa-instagram-square"></i>Instagram MSC</a>
+                        <a href="mailto:mmcmail@gmail.com"><i class="fas fa-at"></i>mail@mail.pl</a>
+
+                    </div>
+                </div>
+
+                <div id="contact-form" class="contact__form">
+                    <div data-aos-delay="300" data-aos="fade-up" class="contact__form__sheet">
+                        <input class="contact__form__sheet__name" id="fromName" type="text" placeholder="Imie"
+                            name="user_name"></input>
+                        <input class="contact__form__sheet__number" id="number" type="text" placeholder="Numer telefonu"
+                            name="contact_number"></input>
+                        <input class="contact__form__sheet__description" id="mail" type="text"
+                            placeholder="Adres e-mail"></input>
+                        <textarea class="contact__form__sheet__message" id="message"
+                            placeholder="Jaki pojazd oraz wybrane usługi" name="message"></textarea>
+                        <button class="contact__form__sheet__button">Wyślij</button>
+                        <div class="contact__form__sheet__info">Proszę uzupełnij wszystkie pola</div>
+                    </div>
+                </div>
             </div>
+            <div class="contact__others">
+                <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a class="contact__others__phone" href="tel:514-139-531"><i class="fas fa-mobile-alt"></i></a>
+                <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
+                        class="fab fa-instagram-square"></i></a>
 
-            <div id="contact-form" class="contact__form">
-                <div class="contact__form__sheet">
-                    <input class="contact__form__sheet__name" id="fromName" type="text" placeholder="Imie"
-                        name="user_name"></input>
-                    <input class="contact__form__sheet__number" id="number" type="text" placeholder="Numer telefonu"
-                        name="contact_number"></input>
-                    <input class="contact__form__sheet__description" id="mail" type="text"
-                        placeholder="Adres e-mail"></input>
-                    <textarea class="contact__form__sheet__message" id="message"
-                        placeholder="Jaki pojazd oraz wybrane usługi" name="message"></textarea>
-                    <button class="contact__form__sheet__button">Wyślij</button>
-                    <div class="contact__form__sheet__info">Proszę uzupełnij wszystkie pola</div>
-                </div>
-                <div class="contact__others">
-                    <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
-                            class="fab fa-facebook-square"></i></a>
-                    <a class="contact__others__phone" href="tel:514-139-531"><i class="fas fa-mobile-alt"></i></a>
-                    <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
-                            class="fab fa-instagram-square"></i></a>
-                </div>
+                <a href="mailto:mmcmail@gmail.com"><i class="fas fa-at"></i></a>
+
             </div>
         </section>
 
     </main>
 
     <footer class="footer">
-        <div class="footer__box">
-            <div class="footer__box__logo"></div>
-            <div class="footer__box__adress">
-                <p>ul.Kopalniana 6 43-225</p>
-                <p>Wola</p>
+        <div class="container">
+            <div class="footer__box">
+                <div class="footer__box__logo"></div>
+                <div class="footer__box__adress">
+                    <p>ul.Kopalniana 6 43-225</p>
+                    <p>Wola</p>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="footer__copyright__text">
+                    &copy Copyright 2021 - All rights reserved
+                </div>
+                <div class="footer__copyright__author">
+                    <a target="_blank" href="https://www.facebook.com/marcin.tutucki/">Author: Marcin Tutucki</a>
+                </div>
             </div>
         </div>
-        <div class="footer__copyright">
-            <div class="footer__copyright__text">
-                &copy Copyright 2021 - All rights reserved
-            </div>
-            <div class="footer__copyright__author">
-                <a target="_blank" href="https://www.facebook.com/marcin.tutucki/">Author: Marcin Tutucki</a>
-            </div>
-        </div>
-
     </footer>
 
-    <!-- emailJs import -->
-    <script src="./dist/js/emailjs.min.js"></script>
-    <!-- bootstrap js import-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <!-- My js script -->
     <script src="./dist/js/main.min.js"></script>
+    <!-- AOS animate on scroll script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./dist/js/aos.min.js"></script>
+
+
+
+    <script>
+        $('[data-aos]').parent().addClass('hideOverflowOnMobile');
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .hideOverflowOnMobile {
+                overflow: hidden;
+            }
+        }
+    </style>
+
+
 </body>
 
 </html>

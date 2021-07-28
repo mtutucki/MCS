@@ -48,7 +48,9 @@ main {
     // about us section
     .aboutus {
         &__card {
-            height: 60vh;
+            &__img {
+                height: 50vh;
+            }
         }
     }
 
