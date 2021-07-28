@@ -271,7 +271,7 @@ main {
         justify-content: center;
         align-items: center;
         padding: $padding-sides-mobile;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         color: $grey;
         background-color: $black;
 
@@ -284,6 +284,7 @@ main {
             width: 100%;
             border-radius: 4px;
 
+
             &__img {
                 position: relative;
                 display: flex;
@@ -291,17 +292,15 @@ main {
                 justify-content: center;
                 height: 25vh;
                 width: 100%;
+                border: 3px solid black;
+                border-bottom: none;
+                border-radius: 4px;
+
                 background-size: 100%;
                 background-position: center;
-                border-top: 3px solid black;
-                border-right: 3px solid black;
-                border-left: 3px solid black;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-                overflow: hidden;
+                filter: grayscale(1);
                 transition: background-size .3s;
                 text-align: center;
-                filter: grayscale(1);
 
                 &__shadow {
                     position: absolute;
@@ -309,7 +308,7 @@ main {
                     left: 0;
                     height: 100%;
                     width: 100%;
-                    background-color: rgba(0, 0, 0, .6);
+                    background-color: rgba(20, 20, 20, .6);
                 }
 
                 &__text {
@@ -344,9 +343,7 @@ main {
                 padding: 2rem;
                 font-size: 1.4rem;
                 width: 100%;
-                border-right: 3px solid black;
-                border-bottom: 3px solid black;
-                border-left: 3px solid black;
+                border: 3px solid $gold;
                 border-bottom-left-radius: 4px;
                 border-bottom-right-radius: 4px;
 
@@ -363,7 +360,7 @@ main {
                     left: 0;
                     width: 15%;
                     height: 2px;
-                    background-color: black;
+                    background-color: $gold;
                 }
 
             }
@@ -386,7 +383,7 @@ main {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, .6);
+            background-color: rgba(20, 20, 20, .6);
         }
 
         &__text {
@@ -403,9 +400,9 @@ main {
 
     // portfolio section
     .portfolio {
-        background-color: white;
-        color: black;
-        padding-bottom: 2rem;
+        background-color: $grey;
+        color: $black;
+        padding-bottom: 4rem;
 
         &__heading {
             padding-bottom: 2rem;
@@ -419,14 +416,15 @@ main {
         flex-direction: column;
         align-items: center;
         padding: $padding-sides-mobile;
-        background-color: black;
-        color: white;
+        background-color: $black;
+        color: $grey;
         font-size: 1.4rem;
 
         &__top {
             width: 100%;
 
             &__card {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -434,17 +432,31 @@ main {
                 font-size: 2rem;
                 height: 25vh;
                 width: 100%;
-                border: 1px solid white;
+                border: 3px solid $gold;
                 border-radius: 4px;
                 background-size: 100%;
                 background-position: center;
-                filter: grayscale(1);
                 text-align: center;
                 transition: background-size .3s;
+
+
+                &__shadow {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(20, 20, 20, .6);
+                }
+
+                &__text {
+                    z-index: 2;
+                }
 
                 &--ceramics {
                     margin-top: 2rem;
                     background-image: url('../img/main/offers/ceramics.jpg');
+
                 }
 
                 &--wax {
@@ -471,15 +483,15 @@ main {
         }
 
         &__down {
-            border: 1px solid white;
+            border: 3px solid $gold;
             padding: 1rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             border-radius: 4px;
 
             &__contact-us {
                 position: relative;
-                color: white;
+                color: $grey;
                 text-decoration: none;
             }
 
@@ -488,7 +500,7 @@ main {
                 position: absolute;
                 bottom: -5px;
                 left: 0;
-                background-color: white;
+                background-color: $gold;
                 height: 1px;
                 width: 100%;
             }
@@ -498,8 +510,8 @@ main {
     // contact form. Phone and socials section
     .contact {
         padding: $padding-sides-mobile;
-        color: black;
-        background-color: white;
+        color: $black;
+        background-color: $grey;
         width: 100%;
         z-index: 100;
 
@@ -508,11 +520,11 @@ main {
             padding: 2rem;
             font-size: 1.4rem;
             text-align: center;
-            color: white;
-            background-color: black;
-
-            border: 1px solid white;
+            color: $grey;
+            background-color: $grey;
+            color: $black;
             border-radius: 4px;
+            border: 3px solid $black;
 
             &__desktop-social {
                 display: none;
@@ -527,27 +539,28 @@ main {
 
         &__form {
             font-size: 1.4rem;
-            color: black;
+            color: $black;
 
             &__sheet {
                 display: flex;
                 width: 100%;
                 flex-direction: column;
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
 
 
                 input,
                 &__button {
+                    border: 3px solid $black;
                     text-align: center;
                     margin-top: 1rem;
                     border-radius: 4px;
                     padding: 1rem 0;
-                    background-color: transparent;
+                    background-color: $grey;
                     transition: background-color .3s, color .3s;
                 }
 
                 &__button:hover {
-                    background-color: black;
+                    background-color: $grey;
                     color: white;
                 }
 
@@ -558,13 +571,14 @@ main {
                 }
 
                 &__message {
+                    background-color: $grey;
                     padding: 1rem 2rem;
                     margin-top: 1rem;
                     min-width: 100%;
                     height: 10vh;
                     min-height: 10vh;
                     max-height: 10vh;
-                    border: 1px solid black;
+                    border: 3px solid $black;
                     border-radius: 4px;
                     text-align: center;
                     overflow: auto;
@@ -587,7 +601,7 @@ main {
 
             a,
             button {
-                color: black;
+                color: $black;
                 padding: 1rem;
                 border: transparent;
                 background-color: transparent;
@@ -611,7 +625,7 @@ main {
     padding: 2rem 0;
     padding: $padding-sides-mobile;
     color: white;
-    background-color: black;
+    background-color: $black;
     text-align: center;
 
     &__box {
@@ -620,7 +634,7 @@ main {
         justify-content: space-between;
         align-items: center;
         font-size: 1.4rem;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
 
         &__logo {
             height: 100px;
@@ -628,6 +642,7 @@ main {
             background-image: url('../img/footer/logo/logo.jpg');
             background-size: cover;
             background-position: center;
+            border-radius: 4px;
         }
     }
 
@@ -636,7 +651,7 @@ main {
         font-size: 1.2rem;
 
         &__author {
-            margin-top: 1rem;
+            padding: 1rem 0;
 
             a {
                 color: white;
