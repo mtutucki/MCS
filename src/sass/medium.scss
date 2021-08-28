@@ -1,8 +1,11 @@
 @import './_variables';
+@import './_colors';
 
 html {
-    scroll-padding-top: 9vh;
+    scroll-padding-top: 80px;
 }
+
+
 
 // navigation
 nav {
@@ -10,15 +13,14 @@ nav {
     // nav for mobile and tablet
     .nav__mobile {
         padding: $padding-sides-tablet;
-        height: 10vh;
-        font-size: 2rem;
+        height: 12vh;
+        font-size: $fs-nav-md;
 
         &__links {
-            height: 90vh;
 
             &__link {
-                margin: 4rem;
-                font-size: 1.8rem;
+                margin: 1rem;
+                font-size: $fs-nav-md-links;
             }
         }
 
@@ -38,13 +40,13 @@ nav {
             }
 
             to {
-                top: 10vh;
+                top: 0vh;
             }
         }
 
         @keyframes nav-disable {
             from {
-                top: 10vh;
+                top: 0vh;
             }
 
             to {
@@ -57,16 +59,19 @@ nav {
 // header - home site
 .header {
 
+    height: 100vh;
+
     // text inside header
     &__text {
+
         &__header {
-            font-size: 3rem;
+            font-size: $fs-header-md;
         }
 
         &__content {
-            font-size: 2rem;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
+            font-size: $fs-header-md-text;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
         }
     }
 
@@ -74,7 +79,7 @@ nav {
     &__knowus-wash {
         &__button {
             padding: 1.5rem;
-            font-size: 2rem;
+            font-size: $fs-header-md-text;
         }
     }
 
@@ -85,7 +90,7 @@ main {
     // head styles for every section "h2"
     .heading {
         font-size: 2.8rem;
-        padding-top: 3rem;
+        padding-top: 4rem;
         font-weight: bold;
         text-align: center;
     }
@@ -93,16 +98,17 @@ main {
     // about us section
     .aboutus {
         padding: $padding-sides-tablet;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
 
         &__card {
-            padding-top: 3rem;
+            padding-top: 4rem;
 
             &__img {
-                height: 25vh;
+                height: 45vh;
+                background-size: cover;
 
                 &__text {
-                    font-size: 3rem;
+                    font-size: $fs-text-md-inside-card;
                 }
 
                 &--details {
@@ -124,16 +130,16 @@ main {
             }
 
             &__under {
-                padding: 3rem;
+                padding: 4rem;
                 font-size: 2rem;
 
                 &__head {
-                    font-size: 2.2rem;
-                    padding-bottom: 3rem;
+                    font-size: $fs-text-md;
+                    padding-bottom: 4rem;
                 }
 
                 &__head::before {
-                    bottom: 2rem;
+                    bottom: 3rem;
                 }
 
             }
@@ -142,29 +148,29 @@ main {
 
     // cut after fir section
     .cut {
-        height: 20vh;
+        height: 30vh;
         background-image: url('../img/main/cut/cut.jpg');
 
         &__text {
             padding: $padding-sides-tablet;
-            font-size: 3rem;
+            font-size: $fs-text-mb-inside-card;
         }
     }
 
     // portfolio section
     .portfolio {
-        background-color: white;
+        background-color: $grey;
         color: black;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
 
         &__heading {
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
         }
 
         .carousel-item {
 
             img {
-                height: 50vh;
+                // height: 65vh;
             }
 
         }
@@ -177,36 +183,36 @@ main {
 
         &__top {
             &__card {
-                margin-bottom: 3rem;
-                font-size: 3rem;
-                height: 25vh;
+                margin-bottom: 4rem;
+                font-size: $fs-text-md-inside-card;
+                height: 50vh;
 
                 &--ceramics {
-                    margin-top: 3rem;
-                    background-image: url('../img/main/offers/ceramics.jpg');
+                    margin-top: 4rem;
+                    // background-image: url('../img/main/offers/ceramics.jpg');
                 }
 
                 &--wax {
-                    background-image: url('../img/main/offers/wax.jfif');
+                    // background-image: url('../img/main/offers/wax.jfif');
                 }
 
                 &--wash {
-                    background-image: url('../img/main/offers/wash.jfif');
+                    // background-image: url('../img/main/offers/wash.jfif');
                 }
 
                 &--impregnation {
-                    background-image: url('../img/main/offers/impregnation.jpg')
+                    // background-image: url('../img/main/offers/impregnation.jpg');
                 }
 
                 &--engine {
-                    background-image: url('../img/main/offers/engine.jpg');
+                    // background-image: url('../img/main/offers/engine.jpg');
                 }
             }
 
         }
 
         &__down {
-            font-size: 1.8rem;
+            font-size: $fs-text-md-inside-card;
             padding: 3rem;
             margin-bottom: 3rem;
         }
@@ -217,27 +223,27 @@ main {
         padding: $padding-sides-tablet;
 
         &__text-box {
-            margin-top: 3rem;
+            margin-top: 4rem;
             padding: 3rem;
             font-size: 1.8rem;
 
             &__up {
-                padding-bottom: 3rem;
-                font-size: 2rem;
+                padding-bottom: 4rem;
+                font-size: $fs-text-md;
             }
         }
 
         &__form {
-            font-size: 1.8rem;
+            font-size: $fs-text-md;
 
             &__sheet {
-                margin-bottom: 3rem;
+                margin-bottom: 4rem;
 
                 input,
                 &__button {
                     margin-top: 1.5rem;
                     border-radius: 4px;
-                    padding: 2rem 0;
+                    padding: 1rem 0;
                 }
 
                 &__info {
@@ -248,14 +254,15 @@ main {
                     padding: 1rem 3rem;
                     margin-top: 2rem;
                     height: 10vh;
-                    min-height: 10vh;
-                    max-height: 10vh;
+                    height: 10vh;
+                    max-height: 20vh;
+                    line-height: 5vh;
                 }
             }
         }
 
         &__others {
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
 
             .fas,
             .fab {
@@ -269,12 +276,11 @@ main {
 
 // footer
 .footer {
-    margin: 3rem 0;
-    padding: $padding-sides-tablet;
+    padding: 2rem 4rem;
 
     &__box {
-        font-size: 1.8rem;
-        margin-bottom: 3rem;
+        font-size: $fs-text-md;
+        margin-bottom: 4rem;
 
         &__logo {
             background-image: url('../img/footer/logo/logo.jpg');
@@ -286,7 +292,7 @@ main {
         font-size: 1.4rem;
 
         &__author {
-            margin-top: 2rem;
+            margin-top: 1rem;
 
         }
     }

@@ -10,11 +10,24 @@ const contact_description = document.body.querySelector(".contact__form__sheet__
 const contact__message = document.body.querySelector(".contact__form__sheet__message");
 const contact_sumbitBtn = document.body.querySelector(".contact__form__sheet__button");
 const contact_info = document.body.querySelector(".contact__form__sheet__info");
+const contact_desktopInfo = document.body.querySelector(".contact__desktop__wrapper__message");
+// footer variables
+const footerCopyrights = document.body.querySelector(".footer__copyright__text");
 
 
 // nav functions
 const nav__logoHandler = () => {
-    nav__mobileLinks.classList.remove("nav__mobile__links--nav__exit");
+
+    nav_burgerBtn.classList.remove("is-active");
+
+    if (nav__mobileLinks.classList.contains("nav__mobile__links--active")) {
+        nav__mobileLinks.classList.remove("nav__mobile__links--active");
+        nav__mobileLinks.classList.add("nav__mobile__links--nav__exit");
+
+    }
+
+
+
 }
 const nav__burgerBtnHandler = () => {
     nav_burgerBtn.classList.toggle("is-active");
@@ -62,25 +75,19 @@ const contact_sendEmail = (params) => {
         contact_info.style.color = "green";
         contact_info.innerHTML = "Dziękujemy. Zgłoszenie zostało wysłane.";
         contact_sumbitBtn.disabled = "true";
+        contact_desktopInfo.style.opacity = "1";
+        contact_desktopInfo.innerHTML = "Dziękujemy. Zgłoszenie zostało wysłane.";
     } else {
         contact_info.style.opacity = "1";
         contact_info.style.color = "red";
         contact_info.innerHTML = "Musisz uzupełnić wszystkie pola.";
+        contact_desktopInfo.style.opacity = "1";
+        contact_desktopInfo.innerHTML = "Musisz uzupełnić wszystkie pola.";
     }
 }
 
-
-
-// nav event listeners
-nav__logo.addEventListener("click", nav__logoHandler)
-nav_burgerBtn.addEventListener("click", nav__burgerBtnHandler);
-
-nav__mobileLinksList.forEach(item => item.addEventListener('click', () => {
-    nav__mobileLinks.classList.remove("nav__mobile__links--active");
-    nav_burgerBtn.classList.toggle("is-active");
-}))
-
 // contact event listeners
+contact_sumbitBtn.addEventListener("click", contact_sendEmail)
 
 // change info when user click name input
 contact_name.addEventListener("keyup", function () {
@@ -89,6 +96,8 @@ contact_name.addEventListener("keyup", function () {
         contact_info.style.opacity = "1";
         contact_info.innerHTML = "Podaj swoje poprawne imię, proszę";
         contact_info.style.color = "red";
+        contact_desktopInfo.style.opacity = "1";
+        contact_desktopInfo.innerHTML = "Podaj swoje poprawne imię, proszę";
     } else {
         contact_info.innerHTML = "Podaj imię, proszę";
         contact_info.style.opacity = "1";
@@ -103,10 +112,8 @@ contact_number.addEventListener("keyup", function () {
     contact_info.style.color = "black";
     contact_info.opacity = 1;
     contact_info.innerHTML = "Podaj swój numer telefonu, proszę";
-
-
-
-
+    contact_desktopInfo.opacity = 1;
+    contact_desktopInfo.innerHTML = "Podaj swój numer telefonu, proszę";
 
 });
 
@@ -115,12 +122,36 @@ contact_description.addEventListener("keyup", function () {
     contact_info.style.opacity = "1";
     contact_info.innerHTML = "Podaj poprawny adres e-mail";
     contact_info.style.color = "black";
+    contact_desktopInfo.style.opacity = "1";
+    contact_desktopInfo.innerHTML = "Podaj poprawny adres e-mail";
+
+
 });
 
 contact__message.addEventListener("keyup", function () {
     contact_info.style.opacity = "1";
     contact_info.innerHTML = "Podaj jakie usługi mają zostać wykonane";
     contact_info.style.color = "black";
+    contact_desktopInfo.style.opacity = "1";
+    contact_desktopInfo.innerHTML = "Podaj jakie usługi mają zostać wykonane";
+
 });
 
-contact_sumbitBtn.addEventListener("click", contact_sendEmail)
+// footer copyright data
+const footer__data = () => {
+    let today = new Date();
+    let date = today.getFullYear();
+    footerCopyrights.innerHTML = `&copy Copyright ${date} - All rights reserved`;
+}
+
+footer__data();
+
+
+// nav event listeners
+nav__logo.addEventListener("click", nav__logoHandler);
+nav_burgerBtn.addEventListener("click", nav__burgerBtnHandler);
+
+nav__mobileLinksList.forEach(item => item.addEventListener('click', () => {
+    nav__mobileLinks.classList.remove("nav__mobile__links--active");
+    nav_burgerBtn.classList.toggle("is-active");
+}))

@@ -16,15 +16,14 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 9vh;
-
 }
 
 body {
     background-color: $black;
-    color: white;
+    color: $grey;
     font-family: 'Montserrat', sans-serif;
-    min-width: 100%;
     overflow-x: hidden;
+    height: 100%;
 }
 
 // navigation
@@ -41,24 +40,26 @@ nav {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 2rem;
         height: 10vh;
+        max-height: 80px;
         width: 100vw;
-        background-color: $grey;
+        font-size: $fs-nav-mb;
         color: $black;
-        font-size: 1.8rem;
+        background-color: $grey;
         z-index: 101;
+
 
         &__logo {
             padding: 1rem;
             color: $black;
             text-decoration: none;
             text-transform: uppercase;
-            transition: transform .3s;
+            transition: color .3s;
         }
 
         &__logo:hover {
-            transform: scale(1.05);
+            color: $gold;
         }
 
         &__burger-btn {
@@ -75,23 +76,23 @@ nav {
             position: fixed;
             top: -100vh;
             padding: $padding-sides-mobile;
+            padding-top: 2rem;
+            width: 100vw;
+            height: 100vh;
             color: $black;
             background-color: $grey;
-            width: 100vw;
-            height: 90vh;
-            z-index: 100;
             text-align: center;
-
+            z-index: 100;
 
             &__link {
-                margin: 3rem;
-                font-size: 1.6rem;
                 padding: 1rem;
+                margin: 3rem;
                 width: 50%;
+                font-size: $fs-nav-mb-links;
                 background-color: $grey;
                 border: 2px solid $black;
                 border-radius: 4px;
-                transition: background-color .3s, border .3s;
+                transition: background-color .3s;
 
                 a {
                     color: $black;
@@ -99,24 +100,16 @@ nav {
                 }
 
                 button {
-                    border: transparent;
                     background-color: transparent;
+                    border: transparent;
                     transition: color .3s;
                 }
             }
 
             &__link:hover {
-                background-color: $black;
-                border: 2px solid $grey;
+                background-color: $gold;
             }
-
-            &__link:hover button {
-                color: $grey;
-            }
-
         }
-
-
 
         &__links--active {
             display: flex;
@@ -135,7 +128,7 @@ nav {
         }
 
         to {
-            top: 10vh;
+            top: 0vh;
         }
     }
 
@@ -148,21 +141,17 @@ nav {
             top: -100vh;
         }
     }
-
 }
 
 // header - home site
 .header {
-
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100%;
     padding: $padding-sides-mobile;
-    // background-size: cover;
-    // background-position: center;
-    // background-attachment: fixed;
+    overflow: hidden;
 
     video {
         position: absolute;
@@ -197,40 +186,41 @@ nav {
 
         &__header {
             font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
+            font-size: $fs-header-mb;
             width: 100%;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 1px;
+            animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         }
 
         &__content {
-            font-size: 1.6em;
-            font-weight: normal;
-            text-align: center;
             margin-top: 3vh;
             margin-bottom: 3vh;
-
+            font-size: $fs-header-md-text;
+            font-weight: normal;
+            text-align: center;
+            animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         }
     }
 
     &__button {
         position: relative;
-        padding: 1rem;
-        position: relative;
-        font-size: 1.4rem;
-        border: 1px solid $black;
+        padding: .8rem;
+        font-size: $fs-header-md-text;
+        color: $grey;
+        background-color: transparent;
+        border: 1px solid $gold;
         border-radius: 4px;
-        background-color: $grey;
         text-decoration: none;
-        color: $black;
-        transition: color .3s;
         text-transform: uppercase;
+        transition: color .3s;
+        animation: text-focus-in 2.9s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         z-index: 0;
     }
 
     &__button:hover {
-        color: $grey;
+        color: $black;
     }
 
     &__button::before {
@@ -240,7 +230,7 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $black;
+        background-color: $gold;
         transform: scaleX(0);
         transform-origin: left;
         transition: transform .3s;
@@ -251,17 +241,42 @@ nav {
         transform: scaleX(1);
     }
 
+    /* ----------------------------------------------
+    * Generated by Animista on 2021-8-17 19:12:42
+    * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
 
+    /**
+     * ----------------------------------------
+     * animation text-focus-in
+     * ----------------------------------------
+     */
+    @keyframes text-focus-in {
+        0% {
+            filter: blur(4px);
+            opacity: 0;
+            color: $gold;
+        }
+
+        100% {
+            filter: blur(0px);
+            opacity: 1;
+            color: $grey;
+        }
+    }
 }
 
 main {
 
     // head styles for every section "h2"
     .heading {
-        font-size: 1.8rem;
-        padding-top: 2rem;
+        font-size: $fs-heading-mb;
+        padding-top: 3rem;
         font-weight: bold;
         text-align: center;
+        text-transform: uppercase;
     }
 
     // about us section
@@ -271,19 +286,19 @@ main {
         justify-content: center;
         align-items: center;
         padding: $padding-sides-mobile;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
         color: $grey;
         background-color: $black;
+        overflow: hidden;
 
 
         &__card {
             display: flex;
             flex-direction: column;
             position: relative;
-            padding-top: 2rem;
+            padding-top: 3rem;
             width: 100%;
             border-radius: 4px;
-
 
             &__img {
                 position: relative;
@@ -291,14 +306,13 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 height: 25vh;
+                max-height: 400px;
                 width: 100%;
                 border: 3px solid black;
                 border-bottom: none;
                 border-radius: 4px;
-
-                background-size: 100%;
+                background-size: cover;
                 background-position: center;
-                filter: grayscale(1);
                 transition: background-size .3s;
                 text-align: center;
 
@@ -312,7 +326,7 @@ main {
                 }
 
                 &__text {
-                    font-size: 2rem;
+                    font-size: $fs-text-mb-inside-card;
                     color: white;
                     z-index: 2;
                 }
@@ -336,12 +350,12 @@ main {
             }
 
             &__img:hover {
-                background-size: 110%;
+                background-size: 140%;
             }
 
             &__under {
                 padding: 2rem;
-                font-size: 1.4rem;
+                font-size: $fs-text-mb;
                 width: 100%;
                 border: 3px solid $gold;
                 border-bottom-left-radius: 4px;
@@ -349,7 +363,7 @@ main {
 
                 &__head {
                     position: relative;
-                    font-size: 1.6rem;
+                    font-size: $fs-text-mb;
                     padding-bottom: 1rem;
                 }
 
@@ -372,10 +386,10 @@ main {
         position: relative;
         display: flex;
         height: 20vh;
+        min-height: 200px;
         background-image: url('../img/main/cut/cut.jpg');
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
 
         &__shadow {
             position: absolute;
@@ -393,7 +407,7 @@ main {
             text-align: center;
             padding: $padding-sides-mobile;
             width: 100%;
-            font-size: 2rem;
+            font-size: $fs-text-mb;
             z-index: 1;
         }
     }
@@ -403,11 +417,30 @@ main {
         background-color: $grey;
         color: $black;
         padding-bottom: 4rem;
+        overflow: hidden;
 
         &__heading {
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
         }
 
+        .carousel-item {
+
+            img {
+                height: 40vh;
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .carousel-indicators .active {
+            background-color: $gold;
+            overflow: hidden;
+        }
     }
 
     // offers section
@@ -418,7 +451,8 @@ main {
         padding: $padding-sides-mobile;
         background-color: $black;
         color: $grey;
-        font-size: 1.4rem;
+        font-size: $fs-text-mb;
+        overflow: hidden;
 
         &__top {
             width: 100%;
@@ -428,17 +462,18 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 2rem;
-                font-size: 2rem;
-                height: 25vh;
+                margin-bottom: 3rem;
+                font-size: $fs-text-mb-inside-card;
+                min-height: 30vh;
                 width: 100%;
                 border: 3px solid $gold;
                 border-radius: 4px;
-                background-size: 100%;
+                background-size: cover;
                 background-position: center;
+                background-repeat: no-repeat;
                 text-align: center;
-                transition: background-size .3s;
-
+                color: black;
+                transition: color .3s;
 
                 &__shadow {
                     position: absolute;
@@ -450,21 +485,22 @@ main {
                 }
 
                 &__text {
+                    color: $grey;
                     z-index: 2;
+                    padding: 1rem;
                 }
 
                 &--ceramics {
-                    margin-top: 2rem;
+                    margin-top: 3rem;
                     background-image: url('../img/main/offers/ceramics.jpg');
-
                 }
 
                 &--wax {
-                    background-image: url('../img/main/offers/wax.jfif');
+                    background-image: url('../img/main/offers/wax.jpg');
                 }
 
                 &--wash {
-                    background-image: url('../img/main/offers/wash.jfif');
+                    background-image: url('../img/main/offers/wash.jpg');
                 }
 
                 &--impregnation {
@@ -474,17 +510,18 @@ main {
                 &--engine {
                     background-image: url('../img/main/offers/engine.jpg');
                 }
-            }
 
-            &__card:hover {
-                cursor: pointer;
-                background-size: 110%;
+                &__back {
+                    transform: rotateX(180deg);
+                    opacity: 0;
+                }
+
             }
         }
 
         &__down {
-            border: 3px solid $gold;
             padding: 1rem;
+            border: 3px solid $gold;
             text-align: center;
             margin-bottom: 4rem;
             border-radius: 4px;
@@ -500,9 +537,9 @@ main {
                 position: absolute;
                 bottom: -5px;
                 left: 0;
-                background-color: $gold;
-                height: 1px;
                 width: 100%;
+                height: 1px;
+                background-color: $gold;
             }
         }
     }
@@ -514,17 +551,23 @@ main {
         background-color: $grey;
         width: 100%;
         z-index: 100;
+        overflow: hidden;
+
+        &__desktop__wrapper__message {
+            opacity: 0;
+        }
 
         &__text-box {
-            margin-top: 2rem;
+            margin-top: 3rem;
             padding: 2rem;
-            font-size: 1.4rem;
+            font-size: $fs-text-mb;
             text-align: center;
-            color: $grey;
-            background-color: $grey;
+            color: $black;
+            background: linear-gradient(150deg, rgba(232, 138, 26, 1) 0%, rgb(199, 118, 19) 33%, rgb(158, 93, 13) 66%);
             color: $black;
             border-radius: 4px;
             border: 3px solid $black;
+            word-wrap: break-word;
 
             &__desktop-social {
                 display: none;
@@ -532,36 +575,39 @@ main {
 
             &__up {
                 padding-bottom: 1rem;
-                font-size: 1.6rem;
+                font-size: $fs-text-mb;
                 font-weight: bold;
             }
         }
 
         &__form {
-            font-size: 1.4rem;
+            font-size: $fs-text-mb;
             color: $black;
 
             &__sheet {
                 display: flex;
-                width: 100%;
                 flex-direction: column;
                 padding-bottom: 1rem;
-
+                width: 100%;
 
                 input,
                 &__button {
-                    border: 3px solid $black;
-                    text-align: center;
-                    margin-top: 1rem;
-                    border-radius: 4px;
-                    padding: 1rem 0;
+                    padding: .8rem 0;
+                    margin-top: 2rem;
                     background-color: $grey;
+                    border: 3px solid $black;
+                    border-radius: 4px;
+                    text-align: center;
                     transition: background-color .3s, color .3s;
                 }
 
+                &__button {
+                    border: 3px solid $black;
+                }
+
                 &__button:hover {
-                    background-color: $grey;
                     color: white;
+                    background-color: $grey;
                 }
 
                 &__info {
@@ -571,18 +617,22 @@ main {
                 }
 
                 &__message {
+                    padding: .8rem;
+                    margin-top: 2rem;
                     background-color: $grey;
-                    padding: 1rem 2rem;
-                    margin-top: 1rem;
-                    min-width: 100%;
                     height: 10vh;
+                    line-height: 5vh;
+                    min-width: 100%;
                     min-height: 10vh;
                     max-height: 10vh;
+                    border: none;
                     border: 3px solid $black;
                     border-radius: 4px;
                     text-align: center;
                     overflow: auto;
                 }
+
+
             }
         }
 
@@ -590,8 +640,8 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-size: 2rem;
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
+            font-size: $fs-text-mb;
             text-align: center;
 
             .fas,
@@ -601,10 +651,11 @@ main {
 
             a,
             button {
-                color: $black;
                 padding: 1rem;
-                border: transparent;
+                color: $black;
                 background-color: transparent;
+                border: transparent;
+                transition: color .3s;
             }
 
             &__phone {
@@ -613,11 +664,14 @@ main {
                 text-decoration: none;
             }
 
+            a:hover,
+            button:hover {
+                color: $gold;
 
+            }
 
         }
     }
-
 }
 
 // footer
@@ -627,13 +681,14 @@ main {
     color: white;
     background-color: $black;
     text-align: center;
+    overflow: hidden;
 
     &__box {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.4rem;
+        font-size: $fs-text-mb;
         padding: 2rem 0;
 
         &__logo {
@@ -662,7 +717,7 @@ main {
             }
 
             a:hover {
-                color: wheat;
+                color: $gold;
             }
 
         }
@@ -673,7 +728,7 @@ main {
         position: absolute;
         left: 0;
         top: -.5rem;
-        background-color: white;
+        background-color: $gold;
         height: 1px;
         width: 100%;
     }

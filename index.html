@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
+    <title>MCS Detailing</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jak poprawić wygląd samochodu? Auto detailing MCS pomoże Ci go zmienić. Polerka, powłoki cermiczne i woskowanie.">
+    <meta name="keywords" content="mcs, detailing, wola">
+    <meta name="author" content="Marcin Tutucki">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./dist/img/footer/logo/logo.jpg">
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- bootstrap -->
@@ -13,13 +19,14 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/227e7616bf.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fa88202a41.js" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- emailJS import -->
@@ -37,7 +44,6 @@
     <link rel="stylesheet" media="screen and (min-width:768px)" href="./dist/css/medium.min.css">
     <link rel="stylesheet" media="screen and (min-width:992px)" href="./dist/css/large.min.css">
 
-    <title>MCS</title>
 </head>
 
 <body>
@@ -84,20 +90,17 @@
 
     <header class="header" id="home">
 
-        <video autoplay muted loop id="myVideo">
+        <video autoplay loop muted playsinline id="myVideo">
             <source src="./dist/video/header/220659119_560257798484606_6933502826498599012_n.mp4" type="video/mp4">
         </video>
 
         <div class="header__shadow"></div>
         <div class="header__text">
             <h1 data-aos-delay="100" data-aos="fade-up" class="header__text__header">Major car spa detailing Wola</h1>
-            <h2 data-aos-delay="300" data-aos="fade-up" class="header__text__content">Dbamy o każdy szczegół w każdym
+            <h2 data-aos-delay="500" data-aos="fade-up" class="header__text__content">Dbamy o każdy szczegół w każdym
                 rodzaju pojazdu</h2>
-            <a data-aos-delay="500" data-aos="fade-up" href="#aboutus" class="header__button"> Poznaj nas
+            <a data-aos-delay="900" data-aos="fade-up" href="#aboutus" class="header__button"> Poznaj nas
             </a>
-
-
-
         </div>
     </header>
 
@@ -164,12 +167,12 @@
 
         <section class="cut">
             <div class="cut__shadow"></div>
-            <div class="cut__text">Major car spa detailing Wola</div>
+            <h2 class="cut__text">Major car spa detailing Wola</h2>
         </section>
 
         <section class="portfolio" id="portfolio">
             <h2 data-aos-delay="300" data-aos="fade-down" class="heading portfolio__heading">Portfolio</h2>
-            <div data-aos-delay="300" data-aos="fade-up" class="portfolio__carousel container">
+            <div data-aos-delay="300" data-aos="fade-up" class="portfolio__carousel container-fluid">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -230,11 +233,13 @@
             <h2 data-aos-delay="300" data-aos="fade-down" class="heading">Nasza oferta</h2>
             <div class="container">
                 <div class="offers__top">
-                    <div data-aos-delay="500" data-aos="fade-right"
-                        class="offers__top__card offers__top__card--ceramics">
+                    <div data-aos-delay="500" data-aos="fade-right" class="offers__top__card offers__top__card--ceramics">
+                        <div class="offers__top__card__border"></div>
                         <div class="offers__top__card__shadow"></div>
                         <div class="offers__top__card__text">Powłoki ceramiczne</div>
                     </div>
+
+
                     <div data-aos-delay="500" data-aos="fade-left" class="offers__top__card offers__top__card--wax">
                         <div class="offers__top__card__shadow"></div>
                         <div class="offers__top__card__text">Aplikacja wosku na lakier</div>
@@ -265,49 +270,46 @@
         </section>
 
         <section class="contact" id="contact">
-            <h2 data-aos-delay="300" data-aos="fade-down" class="heading">Kontakt</h2>
+              <h2 data-aos-delay="300" data-aos="fade-down" class="heading">Kontakt</h2>
 
             <div class="contact__desktop__wrapper container">
                 <div data-aos-delay="300" data-aos="fade-up" class="contact__text-box">
-                    <div class="contact__text-box__up">Napisz do nas!</div>
-                    <div class="contact__text-box__down">Do każdego zlecenia podchodzimy indywidualnie. Napewno się
-                        dogadamy.</div>
+                    <div class="contact__text-box__up">Użyj formularza, aby się skontaktować</div>
+                    <div class="contact__text-box__down">Lub skorzystaj z opcji poniżej:</div>
                     <div class="contact__text-box__desktop-social">
-                        <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
-                                class="fab fa-facebook-square"></i>Facebook MCS</a>
                         <a class="contact__text-box__desktop-social__phone" href="tel:514-139-531"><i
                                 class="fas fa-mobile-alt"></i>514-139-531</a>
+                        <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
+                                class="fab fa-facebook-square"></i>Facebook MCS</a>
                         <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
                                 class="fab fa-instagram-square"></i>Instagram MSC</a>
                         <a href="mailto:mmcmail@gmail.com"><i class="fas fa-at"></i>mail@mail.pl</a>
-
                     </div>
+                    <div class="contact__desktop__wrapper__message">Uzupełnij wszystkie pola, aby się skontaktować</div>
                 </div>
 
                 <div id="contact-form" class="contact__form">
                     <div data-aos-delay="300" data-aos="fade-up" class="contact__form__sheet">
-                        <input  class="contact__form__sheet__name" id="fromName" type="text" placeholder="Imie"
+                        <input class="contact__form__sheet__name" id="fromName" type="text" placeholder="Imie"
                             name="user_name"></input>
-                        <input  class="contact__form__sheet__number" id="number" type="text" placeholder="Numer telefonu"
+                        <input class="contact__form__sheet__number" id="number" type="text" placeholder="Numer telefonu"
                             name="contact_number"></input>
-                        <input  class="contact__form__sheet__description" id="mail" type="text"
+                        <input class="contact__form__sheet__description" id="mail" type="text"
                             placeholder="Adres e-mail"></input>
-                        <textarea  class="contact__form__sheet__message" id="message"
+                        <textarea class="contact__form__sheet__message" id="message"
                             placeholder="Jaki pojazd oraz wybrane usługi" name="message"></textarea>
-                        <button  class="contact__form__sheet__button">Wyślij</button>
+                        <button class="contact__form__sheet__button">Wyślij</button>
                         <div class="contact__form__sheet__info">Proszę uzupełnij wszystkie pola</div>
                     </div>
                 </div>
             </div>
-            <div class="contact__others">
+            <div class="contact__others container">
+                <a class="contact__others__phone" href="tel:514-139-531"><i class="fas fa-mobile-alt"></i></a>
+                <a href="mailto:mmcmail@gmail.com"><i class="fas fa-at"></i></a>
                 <a href="https://www.facebook.com/majorcarspadetailing" target="_blank"><i
                         class="fab fa-facebook-square"></i></a>
-                <a class="contact__others__phone" href="tel:514-139-531"><i class="fas fa-mobile-alt"></i></a>
                 <a href="https://www.instagram.com/mcs_detailing_/" target="_blank"><i
                         class="fab fa-instagram-square"></i></a>
-
-                <a href="mailto:mmcmail@gmail.com"><i class="fas fa-at"></i></a>
-
             </div>
         </section>
 
@@ -327,7 +329,7 @@
                     &copy Copyright 2021 - All rights reserved
                 </div>
                 <div class="footer__copyright__author">
-                    <a target="_blank" href="https://www.facebook.com/marcin.tutucki/">Author: Marcin Tutucki</a>
+                    <a class="footer__copyright__author__text" target="_blank" href="https://do-web-right.com/">Do Web Right</a>
                 </div>
             </div>
         </div>

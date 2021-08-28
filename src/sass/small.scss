@@ -1,4 +1,5 @@
 @import './_variables';
+@import './_colors';
 
 // set global font size to 10px
 html {
@@ -10,10 +11,10 @@ nav {
 
     // nav for mobile and tablet
     .nav__mobile {
+        padding: 0 4rem;
         height: 15vh;
 
         &__links {
-            height: 90vh;
 
             &__link {
                 margin: 1rem;
@@ -26,13 +27,13 @@ nav {
             }
 
             to {
-                top: 15vh;
+                top: 0h;
             }
         }
 
         @keyframes nav-disable {
             from {
-                top: 15vh;
+                top: 0vh;
             }
 
             to {
@@ -40,6 +41,10 @@ nav {
             }
         }
     }
+}
+
+.header {
+    height: 85vh;
 }
 
 
@@ -67,10 +72,14 @@ main {
             padding-bottom: 2rem;
         }
 
+
+
+
+
         .carousel-item {
 
             img {
-                height: 85vh;
+                min-height: 400px;
             }
 
         }
@@ -83,8 +92,7 @@ main {
         flex-direction: column;
         align-items: center;
         padding: $padding-sides-mobile;
-        color: white;
-        font-size: 1.4rem;
+        color: $grey;
 
         &__top {
             width: 100%;
@@ -93,47 +101,39 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 2rem;
-                font-size: 2rem;
-                height: 60vh;
+                height: 30vh;
                 width: 100%;
-                border: 1px solid white;
                 border-radius: 4px;
-                background-size: 100%;
+                background-size: cover;
                 background-position: center;
-                filter: grayscale(1);
                 text-align: center;
-                transition: background-size .3s;
 
                 &--ceramics {
                     margin-top: 2rem;
-                    background-image: url('../img/main/offers/ceramics.jpg');
+                    // background-image: url('../img/main/offers/ceramics.jpg');
                 }
 
                 &--wax {
-                    background-image: url('../img/main/offers/wax.jfif');
+                    // background-image: url('../img/main/offers/wax.jfif');
                 }
 
                 &--wash {
-                    background-image: url('../img/main/offers/wash.jfif');
+                    // background-image: url('../img/main/offers/wash.jfif');
                 }
 
                 &--impregnation {
-                    background-image: url('../img/main/offers/impregnation.jpg')
+                    // background-image: url('../img/main/offers/impregnation.jpg')
                 }
 
                 &--engine {
-                    background-image: url('../img/main/offers/engine.jpg');
+                    // background-image: url('../img/main/offers/engine.jpg');
                 }
             }
 
-            &__card:hover {
-                background-size: 110%;
-            }
         }
 
         &__down {
-            border: 1px solid white;
+            border: 3px solid $gold;
             padding: 1rem;
             width: 100%;
             text-align: center;
@@ -142,7 +142,7 @@ main {
 
             &__contact-us {
                 position: relative;
-                color: white;
+                color: $grey;
                 text-decoration: none;
             }
 
@@ -151,7 +151,7 @@ main {
                 position: absolute;
                 bottom: -5px;
                 left: 0;
-                background-color: white;
+                background-color: $gold;
                 height: 1px;
                 width: 100%;
             }
@@ -161,30 +161,28 @@ main {
     // contact form. Phone and socials section
     .contact {
         padding: $padding-sides-mobile;
-        color: black;
-        background-color: white;
+        color: $black;
+        background-color: $grey;
         width: 100%;
 
         &__text-box {
             margin-top: 2rem;
             padding: 2rem;
-            font-size: 1.4rem;
             text-align: center;
-            color: white;
-            background-color: black;
-            border: 1px solid white;
+            color: $black;
+            background-color: $black;
             border-radius: 4px;
 
             &__up {
                 padding-bottom: 1rem;
-                font-size: 1.6rem;
                 font-weight: bold;
+                text-align: center;
             }
+
         }
 
         &__form {
-            font-size: 1.4rem;
-            color: black;
+            color: $black;
 
             &__sheet {
                 display: flex;
@@ -204,8 +202,8 @@ main {
                 }
 
                 &__button:hover {
-                    background-color: black;
-                    color: white;
+                    background-color: $gold;
+                    color: $black;
                 }
 
                 &__info {
@@ -215,13 +213,13 @@ main {
                 }
 
                 &__message {
-                    padding: 1rem 2rem;
+                    padding: 2rem 2rem;
                     margin-top: 1rem;
                     min-width: 100%;
                     height: 10vh;
-                    min-height: 10vh;
+                    height: 10vh;
                     max-height: 10vh;
-                    border: 1px solid black;
+                    background-color: $grey;
                     border-radius: 4px;
                     text-align: center;
                     overflow: auto;
@@ -233,18 +231,14 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-size: 2rem;
             padding-bottom: 2rem;
             text-align: center;
 
-            .fas,
-            .fab {
-                font-size: 4rem;
-            }
+
 
             a,
             button {
-                color: black;
+                color: $black;
                 padding: 1rem;
                 border: transparent;
                 background-color: transparent;
@@ -253,9 +247,10 @@ main {
             &__phone {
                 display: flex;
                 align-items: center;
-                font-size: 2.2rem;
                 text-decoration: none;
             }
+
+
 
 
 
@@ -266,10 +261,9 @@ main {
 
 // footer
 .footer {
-    margin: 2rem 0;
     padding: $padding-sides-mobile;
-    color: white;
-    background-color: black;
+    color: $grey;
+    background-color: $black;
     text-align: center;
 
     &__box {
@@ -277,7 +271,6 @@ main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.4rem;
         margin-bottom: 2rem;
 
         &__logo {
@@ -291,13 +284,12 @@ main {
 
     &__copyright {
         position: relative;
-        font-size: 1.2rem;
 
         &__author {
             margin-top: 1rem;
 
             a {
-                color: white;
+                color: $grey;
                 padding: .5rem;
                 text-decoration: none;
                 cursor: pointer;
@@ -316,7 +308,7 @@ main {
         position: absolute;
         left: 0;
         top: -.5rem;
-        background-color: white;
+        background-color: $grey;
         height: 1px;
         width: 100%;
     }
