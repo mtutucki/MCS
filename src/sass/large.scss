@@ -158,7 +158,7 @@ main {
                     border-right: none;
                     border-top-left-radius: 4px;
                     border-bottom-left-radius: 4px;
-                    background-image: url('../img/main/aboutus/detail.jpg');
+                    background-image: url('../img/main/aboutus/detail-lg.jpg');
                 }
 
                 &--evolution {
@@ -166,7 +166,7 @@ main {
                     border-left: none;
                     border-top-right-radius: 4px;
                     border-bottom-right-radius: 4px;
-                    background-image: url('../img/main/aboutus/evolution.jpg');
+                    background-image: url('../img/main/aboutus/evolution-lg.jpg');
                 }
 
                 &--fun {
@@ -174,7 +174,7 @@ main {
                     border-right: none;
                     border-top-left-radius: 4px;
                     border-bottom-left-radius: 4px;
-                    background-image: url('../img/main/aboutus/fun.jpg');
+                    background-image: url('../img/main/aboutus/fun-lg.jpg');
                 }
 
                 &--pets {
@@ -182,7 +182,7 @@ main {
                     border-left: none;
                     border-top-right-radius: 4px;
                     border-bottom-right-radius: 4px;
-                    background-image: url('../img/main/aboutus/pets.jpg');
+                    background-image: url('../img/main/aboutus/pets-lg.jpg');
                 }
 
             }
@@ -213,8 +213,8 @@ main {
 
     // cut after fir section
     .cut {
-        height: 20vh;
-        background-image: url('../img/main/cut/cut.jpg');
+        height: 30vh;
+        background-image: url('../img/main/cut/cut-lg.jpg');
 
         &__text {
             display: flex;
@@ -235,8 +235,8 @@ main {
 
         .carousel-item {
             img {
-                height: 70vh;
-                border-radius: 4px;
+                height: 75vh;
+                border-radius: 8px;
             }
         }
 
@@ -257,7 +257,6 @@ main {
 
             &__down {
                 display: flex;
-                justify-content: space-evenly;
             }
 
             &__card {
@@ -270,26 +269,29 @@ main {
                 background-size: cover;
 
 
-                &--ceramics {
-                    // background-image: url('../img/main/offers/ceramics.jpg');
+                &--upholstery {
+                    margin-top: 3rem;
+                    background-image: url('../img/main/offers/upholstery-lg.jpg');
                 }
 
-                &--wax {
-                    margin: 0 6rem;
-                    // background-image: url('../img/main/offers/wax.jfif');
+                &--interior {
+                    background-image: url('../img/main/offers/interior-lg.jpg');
+                }
+
+                &--polisher {
+                    background-image: url('../img/main/offers/polisher-lg.jpg');
+                }
+
+                &--glass {
+                    background-image: url('../img/main/offers/glass-lg.jpg')
                 }
 
                 &--wash {
-                    margin-right: 0;
-                    // background-image: url('../img/main/offers/wash.jfif');
+                    background-image: url('../img/main/offers/wax-lg.jpg');
                 }
 
-                &--impregnation {
-                    // background-image: url('../img/main/offers/impregnation.jpg')
-                }
-
-                &--engine {
-                    // background-image: url('../img/main/offers/engine.jpg');
+                &--reflector {
+                    background-image: url('../img/main/offers/reflector-lg.jpg');
                 }
             }
 
@@ -335,6 +337,7 @@ main {
             height: 100%;
 
             &__message {
+                display: flex;
                 padding: 0 2rem;
                 margin-top: 1rem;
                 color: $black;

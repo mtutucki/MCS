@@ -112,19 +112,19 @@ main {
                 }
 
                 &--details {
-                    background-image: url('../img/main/aboutus/detail.jpg');
+                    background-image: url('../img/main/aboutus/detail-md.jpg');
                 }
 
                 &--evolution {
-                    background-image: url('../img/main/aboutus/evolution.jpg');
+                    background-image: url('../img/main/aboutus/evolution-md.png');
                 }
 
                 &--fun {
-                    background-image: url('../img/main/aboutus/fun.jpg');
+                    background-image: url('../img/main/aboutus/fun-md.jpg');
                 }
 
                 &--pets {
-                    background-image: url('../img/main/aboutus/pets.jpg');
+                    background-image: url('../img/main/aboutus/pets-md.png');
                 }
 
             }
@@ -149,7 +149,7 @@ main {
     // cut after fir section
     .cut {
         height: 30vh;
-        background-image: url('../img/main/cut/cut.jpg');
+        background-image: url('../img/main/cut/cut-md.jpg');
 
         &__text {
             padding: $padding-sides-tablet;
@@ -187,25 +187,29 @@ main {
                 font-size: $fs-text-md-inside-card;
                 height: 50vh;
 
-                &--ceramics {
-                    margin-top: 4rem;
-                    // background-image: url('../img/main/offers/ceramics.jpg');
+                &--upholstery {
+                    margin-top: 3rem;
+                    background-image: url('../img/main/offers/upholstery-md.jpg');
                 }
 
-                &--wax {
-                    // background-image: url('../img/main/offers/wax.jfif');
+                &--interior {
+                    background-image: url('../img/main/offers/interior-md.jpg');
+                }
+
+                &--polisher {
+                    background-image: url('../img/main/offers/polisher-md.jpg');
+                }
+
+                &--glass {
+                    background-image: url('../img/main/offers/glass-md.jpg')
                 }
 
                 &--wash {
-                    // background-image: url('../img/main/offers/wash.jfif');
+                    background-image: url('../img/main/offers/wax-md.jpg');
                 }
 
-                &--impregnation {
-                    // background-image: url('../img/main/offers/impregnation.jpg');
-                }
-
-                &--engine {
-                    // background-image: url('../img/main/offers/engine.jpg');
+                &--reflector {
+                    background-image: url('../img/main/offers/reflector-md.jpg');
                 }
             }
 
