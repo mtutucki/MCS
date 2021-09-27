@@ -112,19 +112,19 @@ main {
                 }
 
                 &--details {
-                    background-image: url('../img/main/aboutus/detail-md.jpg');
+                    background-image: url('../img/main/aboutus/detail-md.webp');
                 }
 
                 &--evolution {
-                    background-image: url('../img/main/aboutus/evolution-md.png');
+                    background-image: url('../img/main/aboutus/evolution-md.webp');
                 }
 
                 &--fun {
-                    background-image: url('../img/main/aboutus/fun-md.jpg');
+                    background-image: url('../img/main/aboutus/fun-md.webp');
                 }
 
                 &--pets {
-                    background-image: url('../img/main/aboutus/pets-md.png');
+                    background-image: url('../img/main/aboutus/pets-md.webp');
                 }
 
             }
@@ -149,7 +149,7 @@ main {
     // cut after fir section
     .cut {
         height: 30vh;
-        background-image: url('../img/main/cut/cut-md.jpg');
+        background-image: url('../img/main/cut/cut-md.webp');
 
         &__text {
             padding: $padding-sides-tablet;
@@ -167,13 +167,7 @@ main {
             padding-bottom: 4rem;
         }
 
-        .carousel-item {
 
-            img {
-                // height: 65vh;
-            }
-
-        }
 
     }
 
@@ -189,27 +183,27 @@ main {
 
                 &--upholstery {
                     margin-top: 3rem;
-                    background-image: url('../img/main/offers/upholstery-md.jpg');
+                    background-image: url('../img/main/offers/upholstery-md.webp');
                 }
 
                 &--interior {
-                    background-image: url('../img/main/offers/interior-md.jpg');
+                    background-image: url('../img/main/offers/interior-md.webp');
                 }
 
                 &--polisher {
-                    background-image: url('../img/main/offers/polisher-md.jpg');
+                    background-image: url('../img/main/offers/polisher-md.webp');
                 }
 
                 &--glass {
-                    background-image: url('../img/main/offers/glass-md.jpg')
+                    background-image: url('../img/main/offers/glass-md.webp')
                 }
 
                 &--wash {
-                    background-image: url('../img/main/offers/wax-md.jpg');
+                    background-image: url('../img/main/offers/wax-md.webp');
                 }
 
                 &--reflector {
-                    background-image: url('../img/main/offers/reflector-md.jpg');
+                    background-image: url('../img/main/offers/reflector-md.webp');
                 }
             }
 
@@ -287,7 +281,7 @@ main {
         margin-bottom: 4rem;
 
         &__logo {
-            background-image: url('../img/footer/logo/logo.jpg');
+            background-image: url('../img/footer/logo/logo.webp');
         }
     }
 
