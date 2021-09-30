@@ -1,0 +1,3 @@
+User-agent: *
+
+https://mtutucki.github.io/MCS/sitemap.xml
