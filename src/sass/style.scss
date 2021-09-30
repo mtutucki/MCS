@@ -191,7 +191,7 @@ nav {
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 1px;
-            animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
+            // animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         }
 
         &__content {
@@ -200,7 +200,7 @@ nav {
             font-size: $fs-header-md-text;
             font-weight: normal;
             text-align: center;
-            animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
+            // animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         }
     }
 
@@ -215,7 +215,7 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         transition: color .3s;
-        animation: text-focus-in 2.9s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
+        // animation: text-focus-in 2.9s cubic-bezier(0.550, 0.085, 0.680, 0.530) forwards;
         z-index: 0;
     }
 
