@@ -1,3 +1,8 @@
+
+
+const main = () => {
+
+
 // nav variables
 const nav_burgerBtn = document.body.querySelector(".hamburger");
 const nav__mobileLinks = document.body.querySelector(".nav__mobile__links");
@@ -155,3 +160,7 @@ nav__mobileLinksList.forEach(item => item.addEventListener('click', () => {
     nav__mobileLinks.classList.remove("nav__mobile__links--active");
     nav_burgerBtn.classList.toggle("is-active");
 }))
+}
+
+addEventListener("DOMContentLoaded", main);
+
