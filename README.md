@@ -1,7 +1,7 @@
 #MCS
 
 Site adress:
-https://mcsdetailing.pl/
+https://mtutucki.github.io/MCS/
 
 
 ### Table of contents
