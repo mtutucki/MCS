@@ -12,7 +12,7 @@ https://mtutucki.github.io/MCS/
 It's site for my friend Konrad. Konrad has a detailing businnes and asked me to create a site for him. 
 
 ## Technologies
-I used html, css, javascript and SASS preprocessor. <br /> 
+I used html, SASS, and  javascript. <br /> 
 I used AOS for animation on scroll. 
 
 
